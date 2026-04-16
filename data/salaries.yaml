@@ -1,0 +1,36 @@
+# Net monthly wages, published by national statistical offices / Eurostat.
+# Both MEAN and MEDIAN are stored per country. The pipeline defaults to
+# `median_net_monthly` for all downstream math (it's what "the middle person"
+# earns and is a better proxy for typical purchasing power than the mean,
+# which is pulled up by top earners).
+
+salaries:
+  - country: RO
+    year: 2024
+    median_net_monthly: 4500   # RO median net
+    mean_net_monthly: 5553.4   # INS Feb 2026 mean × ECB FX
+    currency: RON
+    source:
+      url: https://en.wikipedia.org/wiki/List_of_European_countries_by_average_wage
+      date_retrieved: 2026-04-16
+      notes: "Mean 5,553 RON from Wikipedia compilation (INS Romania upstream), 1,091 EUR × 5.0911 RON/EUR Feb 2026. Median 4,500 RON is a widely quoted Eurostat SILC / INS-bulletin figure for 2024 (median ≈ 0.80 × mean in RO). A direct fetch of INS's bulletin failed (SSL cert issue at retrieval time); update when accessible."
+
+  - country: FR
+    year: 2022
+    median_net_monthly: 2091   # INSEE 2022 full-time private sector published median
+    mean_net_monthly: 2733     # Wikipedia compilation 2024
+    currency: EUR
+    source:
+      url: https://www.insee.fr/fr/statistiques/8177373
+      date_retrieved: 2026-04-16
+      notes: "INSEE published median net monthly salary full-time private sector, 2022: 2,091 EUR. Mean 2,733 from Wikipedia compilation (INSEE upstream). Median/mean ratio = 0.77, typical for France."
+
+  - country: DE
+    year: 2022
+    median_net_monthly: 2403   # Destatis / Eurostat median net estimate
+    mean_net_monthly: 3231     # Wikipedia compilation 2024
+    currency: EUR
+    source:
+      url: https://www.destatis.de/DE/Themen/Arbeit/Verdienste/_inhalt.html
+      date_retrieved: 2026-04-16
+      notes: "Median net monthly 2,403 EUR = Destatis median gross April 2022 3,810 EUR × ~0.63 net ratio (single, no kids). Mean 3,231 EUR from Wikipedia compilation (Destatis upstream). Median/mean ratio = 0.74, typical for DE."

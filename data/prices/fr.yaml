@@ -1,0 +1,250 @@
+country: FR
+prices:
+  - item_id: rent_1br_outside_center_capital
+    price: 1130
+    currency: EUR
+    unit: apartment/month
+    source:
+      url: https://www.seloger.com/prix-de-l-immo/location/ile-de-france/paris/paris-19eme/750119.htm
+      date_retrieved: 2026-04-16
+      notes: "SeLoger rental index Paris 19e/20e (outside central arrondissements), ~24.9-25.4 EUR/m² × 45m² T2 ≈ 1,120-1,143 EUR. Midpoint used."
+  - item_id: rent_2br_good_area_capital
+    price: 2090
+    currency: EUR
+    unit: apartment/month
+    source:
+      url: https://www.seloger.com/prix-de-l-immo/location/ile-de-france/paris.htm
+      date_retrieved: 2026-04-16
+      notes: "SeLoger Paris-wide T3 average (Jan 2026)."
+  - item_id: apartment_purchase_price_per_m2_capital
+    price: 9669
+    currency: EUR
+    unit: EUR/m2
+    source:
+      url: https://www.meilleursagents.com/prix-immobilier/paris-75000/
+      date_retrieved: 2026-04-16
+      notes: "MeilleursAgents estimation 1 April 2026."
+  - item_id: electricity_kwh
+    price: 0.194
+    currency: EUR
+    unit: kWh
+    source:
+      url: https://particulier.edf.fr/fr/accueil/electricite-gaz/offres-electricite/tarif-bleu.html
+      date_retrieved: 2026-04-16
+      notes: "EDF Tarif Bleu option Base 6 kVA, April 2026. Excludes 187.80 EUR/yr subscription."
+  - item_id: gas_kwh
+    price: 0.13912
+    currency: EUR
+    unit: kWh
+    source:
+      url: https://particuliers.engie.fr/gaz-naturel/conseils-gaz-naturel/conseils-tarifs-gaz-naturel/evolution-prix-repere-gaz.html
+      date_retrieved: 2026-04-16
+      notes: "Prix repère CRE / ENGIE residential gas TTC, April 2026."
+  - item_id: water_m3
+    price: 4.23
+    currency: EUR
+    unit: m3
+    source:
+      url: https://www.eaudeparis.fr/prix-de-leau
+      date_retrieved: 2026-04-16
+      notes: "Eau de Paris 4.23 EUR/m³ TTC from 1 Jan 2026 (potable + sanitation)."
+  - item_id: internet_100mbps_monthly
+    price: 24.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://shop.sosh.fr/box-internet
+      date_retrieved: 2026-04-16
+      notes: "Sosh (Orange) fiber, no-commitment plan. Entry-level French fiber already exceeds 100 Mbps; no 100-Mbps-only tier."
+  - item_id: public_transit_monthly_pass
+    price: 90.80
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.iledefrance-mobilites.fr/en/tarifs-titre-de-transport-en-commun-2026
+      date_retrieved: 2026-04-16
+      notes: "Navigo mensuel toutes zones, 1 Jan 2026."
+  - item_id: car_purchase_vw_golf_equivalent
+    price: 30900
+    currency: EUR
+    unit: car
+    source:
+      url: https://www.volkswagen.fr/fr/modeles-et-configurateur/golf.html
+      date_retrieved: 2026-04-16
+      notes: "VW Golf 1.5 TSI 116 ch starting price April 2026 (excl. 3,000 EUR dealer discount)."
+  - item_id: car_insurance_annual
+    price: 1650
+    currency: EUR
+    unit: year
+    source:
+      url: https://www.matmut.fr/assurance/auto
+      date_retrieved: 2026-04-16
+      notes: "Matmut tous risques benchmark, 35yo Paris driver, bonus 0.76, Feb 2026 comparative. Actual quote requires form."
+  - item_id: fuel_petrol_liter
+    price: 2.019
+    currency: EUR
+    unit: liter
+    source:
+      url: https://www.prix-carburants.gouv.fr/
+      date_retrieved: 2026-04-16
+      notes: "SP95-E10 France national avg, 9 April 2026."
+  - item_id: bread_loaf_500g
+    price: 1.59
+    currency: EUR
+    unit: loaf
+    source:
+      url: https://www.carrefour.fr/p/pain-de-mie-extra-moelleux-nature-carrefour-classic-3270190021070
+      date_retrieved: 2026-04-16
+      notes: "Carrefour Classic pain de mie extra moelleux nature 500g. Range 0.95-1.59 EUR for 500g pain de mie."
+  - item_id: milk_1l
+    price: 1.05
+    currency: EUR
+    unit: liter
+    source:
+      url: https://www.carrefour.fr/p/lait-demi-ecreme-carrefour-classic-3276554163158
+      date_retrieved: 2026-04-16
+      notes: "Carrefour Classic lait demi-écrémé UHT 1L."
+  - item_id: eggs_10
+    price: 1.79
+    currency: EUR
+    unit: 10-pack
+    source:
+      url: https://www.carrefour.fr/p/oeufs-frais-simpl-3560070392742
+      date_retrieved: 2026-04-16
+      notes: "SIMPL (Carrefour entry brand) 10 eggs standard."
+  - item_id: chicken_breast_1kg
+    price: 13.90
+    currency: EUR
+    unit: kg
+    source:
+      url: https://www.carrefour.fr/p/filets-de-poulet-carrefour-3560070343607
+      date_retrieved: 2026-04-16
+      notes: "Carrefour standard (non-bio) filets de poulet 1kg tray."
+  - item_id: potatoes_1kg
+    price: 1.99
+    currency: EUR
+    unit: kg
+    source:
+      url: https://www.carrefour.fr/p/pommes-de-terre-de-consommation-baie-de-somme-3523680381476
+      date_retrieved: 2026-04-16
+      notes: "Pommes de Terre de Consommation Baie de Somme 1kg. SIMPL budget 0.99 EUR/kg exists."
+  - item_id: apples_1kg
+    price: 2.59
+    currency: EUR
+    unit: kg
+    source:
+      url: https://www.carrefour.fr/p/pommes-golden-delicious-bio-3276556199803
+      date_retrieved: 2026-04-16
+      notes: "Carrefour 1kg carton apples (Golden/Granny Smith) standard."
+  - item_id: pasta_500g
+    price: 1.95
+    currency: EUR
+    unit: pack
+    source:
+      url: https://www.carrefour.fr/p/pates-penne-rigate-barilla-8076802085738
+      date_retrieved: 2026-04-16
+      notes: "Barilla penne rigate 500g. Typical Carrefour.fr 2026 price."
+  - item_id: coffee_ground_250g
+    price: 4.49
+    currency: EUR
+    unit: pack
+    source:
+      url: https://www.carrefour.fr/p/cafe-moulu-classique-carrefour-classic-3270190007920
+      date_retrieved: 2026-04-16
+      notes: "Carrefour Classic café moulu classique 250g."
+  - item_id: restaurant_mid_range_meal
+    price: 22
+    currency: EUR
+    unit: meal
+    source:
+      url: https://www.combien-coute.net/restaurant/ile-de-france/paris/
+      date_retrieved: 2026-04-16
+      notes: "Paris mid-range: main 15-18 EUR + drink 3-5 EUR; representative 22 EUR for main + soft drink."
+  - item_id: gym_monthly_membership
+    price: 29.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.basic-fit.com/fr-fr/prix
+      date_retrieved: 2026-04-16
+      notes: "Basic-Fit Premium monthly, all-club access including Paris."
+  - item_id: cinema_ticket
+    price: 15.50
+    currency: EUR
+    unit: ticket
+    source:
+      url: https://www.allocine.fr/salle/cinema-C0159/tarifs/
+      date_retrieved: 2026-04-16
+      notes: "UGC Ciné Cité Les Halles Paris 1er, tarif plein adulte."
+  - item_id: phone_plan_monthly
+    price: 19.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://mobile.free.fr/fiche-forfait-free
+      date_retrieved: 2026-04-16
+      notes: "Free 5G+ forfait, unlimited data, price locked through 2027, no commitment."
+  - item_id: iphone_15_128gb
+    price: 869
+    currency: EUR
+    unit: unit
+    source:
+      url: https://www.apple.com/fr/shop/buy-iphone/iphone-15
+      date_retrieved: 2026-04-16
+      notes: "Apple FR list price iPhone 15 128GB. Exact snippet price not exposed; value is Apple.com/fr published list since 2025."
+  - item_id: laptop_macbook_air_m3
+    price: 1299
+    currency: EUR
+    unit: unit
+    source:
+      url: https://www.apple.com/fr/shop/buy-mac/macbook-air
+      date_retrieved: 2026-04-16
+      notes: "Apple FR list for MacBook Air 13 M3 8/256. Retailers list 874-900 EUR at margin."
+  - item_id: netflix_standard_monthly
+    price: 14.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://help.netflix.com/en/node/24926
+      date_retrieved: 2026-04-16
+      notes: "Netflix Standard (ad-free, 2 screens), France pricing in effect since April 2025."
+  - item_id: spotify_premium_monthly
+    price: 12.14
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.spotify.com/fr/premium/
+      date_retrieved: 2026-04-16
+      notes: "Spotify Premium Individual France."
+  - item_id: intra_eu_flight_return
+    price: 308
+    currency: EUR
+    unit: return trip
+    source:
+      url: https://wwws.airfrance.fr/fr-fr/vols-de-paris-a-bucarest
+      date_retrieved: 2026-04-16
+      notes: "Air France CDG-OTP economy RT, weekly avg 3-week advance booking, April 2026."
+  - item_id: playstation_5_disc
+    price: 549.99
+    currency: EUR
+    unit: unit
+    source:
+      url: https://direct.playstation.com/fr-fr/consoles
+      date_retrieved: 2026-04-16
+      notes: "Sony France direct store, PS5 Slim disc edition, 2026 list price."
+  - item_id: big_mac
+    price: 5.30
+    currency: EUR
+    unit: unit
+    source:
+      url: https://www.mcdonalds.fr/la-carte/burgers/big-mac
+      date_retrieved: 2026-04-16
+      notes: "McDonald's France Big Mac standalone, approximate 2026 shelf price."
+  - item_id: vacation_week_abroad
+    price: 1400
+    currency: EUR
+    unit: trip
+    source:
+      url: https://www.fram.fr/espagne/canaries/sejour-vacances-tout-compris-voyage-all-inclusive-tenerife-4/
+      date_retrieved: 2026-04-16
+      notes: "Fram Tenerife AI 1 week, 2 persons mid-tier 4-star hotel + flights, standard season."

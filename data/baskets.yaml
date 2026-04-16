@@ -1,0 +1,252 @@
+# Canonical item catalog + basket compositions.
+# Every price row in data/prices/{ro,fr,de}.yaml MUST reference one of these item_ids.
+# Quantities are monthly. Durables use amortization_months on the item, and the
+# quantity stays 1.0 (one unit per month, but the unit cost is price / amortization).
+
+items:
+  # --- Housing ---
+  rent_1br_outside_center_capital:
+    id: rent_1br_outside_center_capital
+    description: Rent for a 1-bedroom apartment outside the city center of the capital
+    unit: apartment/month
+    amortization_months: 1
+  rent_2br_good_area_capital:
+    id: rent_2br_good_area_capital
+    description: Rent for a 2-bedroom apartment in a decent area of the capital
+    unit: apartment/month
+    amortization_months: 1
+  apartment_purchase_price_per_m2_capital:
+    id: apartment_purchase_price_per_m2_capital
+    description: Purchase price per m² for an apartment in the capital (secondary market, outside prime center)
+    unit: EUR/m2
+    amortization_months: 1
+
+  # --- Utilities ---
+  electricity_kwh:
+    id: electricity_kwh
+    description: Household electricity, per kWh, including VAT
+    unit: kWh
+    amortization_months: 1
+  gas_kwh:
+    id: gas_kwh
+    description: Household natural gas, per kWh, including VAT
+    unit: kWh
+    amortization_months: 1
+  water_m3:
+    id: water_m3
+    description: Cold water + sewerage, per m³
+    unit: m3
+    amortization_months: 1
+  internet_100mbps_monthly:
+    id: internet_100mbps_monthly
+    description: Fixed home internet, ~100 Mbps plan, per month
+    unit: month
+    amortization_months: 1
+
+  # --- Transport ---
+  public_transit_monthly_pass:
+    id: public_transit_monthly_pass
+    description: Monthly public transit pass in the capital (all zones / central zone)
+    unit: pass/month
+    amortization_months: 1
+  car_purchase_vw_golf_equivalent:
+    id: car_purchase_vw_golf_equivalent
+    description: VW Golf (or equivalent C-segment) new, base trim, on-road price
+    unit: car
+    amortization_months: 120  # 10-year amortization
+  car_insurance_annual:
+    id: car_insurance_annual
+    description: Full comprehensive car insurance for a C-segment car, 35yo driver, capital
+    unit: year
+    amortization_months: 12
+  fuel_petrol_liter:
+    id: fuel_petrol_liter
+    description: Petrol 95, per liter, at pump
+    unit: liter
+    amortization_months: 1
+
+  # --- Food (grocery) ---
+  bread_loaf_500g:
+    id: bread_loaf_500g
+    description: White bread loaf, ~500g, supermarket own-brand or generic
+    unit: loaf
+    amortization_months: 1
+  milk_1l:
+    id: milk_1l
+    description: Whole cow's milk, 1L carton, mid-range brand
+    unit: liter
+    amortization_months: 1
+  eggs_10:
+    id: eggs_10
+    description: Chicken eggs, 10-pack, size M, cage-free or equivalent
+    unit: 10-pack
+    amortization_months: 1
+  chicken_breast_1kg:
+    id: chicken_breast_1kg
+    description: Fresh chicken breast fillet, per kg
+    unit: kg
+    amortization_months: 1
+  potatoes_1kg:
+    id: potatoes_1kg
+    description: Fresh potatoes, loose, per kg
+    unit: kg
+    amortization_months: 1
+  apples_1kg:
+    id: apples_1kg
+    description: Fresh apples, loose, per kg
+    unit: kg
+    amortization_months: 1
+  pasta_500g:
+    id: pasta_500g
+    description: Dry pasta, 500g pack, mid-range brand
+    unit: pack
+    amortization_months: 1
+  coffee_ground_250g:
+    id: coffee_ground_250g
+    description: Ground coffee, 250g pack, mid-range brand
+    unit: pack
+    amortization_months: 1
+
+  # --- Eating out / leisure ---
+  restaurant_mid_range_meal:
+    id: restaurant_mid_range_meal
+    description: Mid-range restaurant meal, one person, main course + drink
+    unit: meal
+    amortization_months: 1
+  gym_monthly_membership:
+    id: gym_monthly_membership
+    description: Mid-range gym monthly membership, capital
+    unit: month
+    amortization_months: 1
+  cinema_ticket:
+    id: cinema_ticket
+    description: Cinema ticket, adult, evening, standard 2D
+    unit: ticket
+    amortization_months: 1
+
+  # --- Services & comms ---
+  phone_plan_monthly:
+    id: phone_plan_monthly
+    description: Mobile postpaid plan with unlimited calls and ~20GB data
+    unit: month
+    amortization_months: 1
+
+  # --- Global / tradable ---
+  iphone_15_128gb:
+    id: iphone_15_128gb
+    description: Apple iPhone 15, 128GB, new, official Apple Store price
+    unit: unit
+    amortization_months: 36
+  laptop_macbook_air_m3:
+    id: laptop_macbook_air_m3
+    description: Apple MacBook Air M3 13", 8GB/256GB base, new
+    unit: unit
+    amortization_months: 48
+  netflix_standard_monthly:
+    id: netflix_standard_monthly
+    description: Netflix Standard plan, per month
+    unit: month
+    amortization_months: 1
+  spotify_premium_monthly:
+    id: spotify_premium_monthly
+    description: Spotify Premium Individual, per month
+    unit: month
+    amortization_months: 1
+  intra_eu_flight_return:
+    id: intra_eu_flight_return
+    description: Return economy flight, ~1500km intra-EU, 3 weeks advance, low-cost or legacy
+    unit: return trip
+    amortization_months: 1
+
+  # --- Reference gadgets (not in any basket; used for "what can a month of leftover buy" chart) ---
+  playstation_5_disc:
+    id: playstation_5_disc
+    description: Sony PlayStation 5 (disc edition), new, retailer price
+    unit: unit
+    amortization_months: 1
+  big_mac:
+    id: big_mac
+    description: McDonalds Big Mac, single burger, per unit
+    unit: unit
+    amortization_months: 1
+
+  # --- Vacation (annualized) ---
+  vacation_week_abroad:
+    id: vacation_week_abroad
+    description: One week of modest foreign vacation (mid-tier hotel + meals + basic activities), 2 people, total cost
+    unit: trip
+    amortization_months: 12
+
+baskets:
+  - name: survival
+    description: |
+      The basket many Romanians actually live on: shelter, basic food, transit, utilities, phone.
+      No car, no dining out, no subscriptions.
+    items:
+      rent_1br_outside_center_capital: 1.0
+      electricity_kwh: 150
+      gas_kwh: 300
+      water_m3: 4
+      internet_100mbps_monthly: 1.0
+      public_transit_monthly_pass: 1.0
+      phone_plan_monthly: 1.0
+      bread_loaf_500g: 20
+      milk_1l: 10
+      eggs_10: 4
+      chicken_breast_1kg: 3
+      potatoes_1kg: 5
+      apples_1kg: 3
+      pasta_500g: 4
+      coffee_ground_250g: 1
+
+  - name: middle_class
+    description: |
+      A typical Western-European middle-class lifestyle: larger apartment, better food,
+      car ownership, dining out twice a week, gym, subscriptions, one vacation amortized.
+    items:
+      rent_2br_good_area_capital: 1.0
+      electricity_kwh: 250
+      gas_kwh: 500
+      water_m3: 6
+      internet_100mbps_monthly: 1.0
+      public_transit_monthly_pass: 0.5  # one household member uses transit, other uses the car
+      phone_plan_monthly: 2.0           # two phones in household
+      car_purchase_vw_golf_equivalent: 1.0
+      car_insurance_annual: 1.0
+      fuel_petrol_liter: 80
+      bread_loaf_500g: 20
+      milk_1l: 12
+      eggs_10: 4
+      chicken_breast_1kg: 4
+      potatoes_1kg: 6
+      apples_1kg: 6
+      pasta_500g: 4
+      coffee_ground_250g: 2
+      restaurant_mid_range_meal: 8
+      gym_monthly_membership: 1.0
+      cinema_ticket: 2
+      netflix_standard_monthly: 1.0
+      spotify_premium_monthly: 1.0
+      vacation_week_abroad: 1.0
+
+  - name: global
+    description: |
+      Tradable goods and services that price nearly identically across the EU.
+      phone, laptop, streaming, an intra-EU flight. Exposes where PPS lies most.
+    items:
+      iphone_15_128gb: 1.0
+      laptop_macbook_air_m3: 1.0
+      netflix_standard_monthly: 1.0
+      spotify_premium_monthly: 1.0
+      intra_eu_flight_return: 1.0
+
+  - name: housing_only
+    description: |
+      Rent + utilities + amortized purchase price for a 60m² apartment in the capital.
+      Isolates the single category that most distorts PPS comparisons.
+    items:
+      rent_1br_outside_center_capital: 1.0
+      electricity_kwh: 150
+      gas_kwh: 300
+      water_m3: 4
+      apartment_purchase_price_per_m2_capital: 0.5  # 60m² / 120 months = 0.5 m²/month

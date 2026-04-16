@@ -1,0 +1,250 @@
+country: DE
+prices:
+  - item_id: rent_1br_outside_center_capital
+    price: 750
+    currency: EUR
+    unit: apartment/month
+    source:
+      url: https://www.immobilienscout24.de/immobilienpreise/berlin/berlin/mietspiegel
+      date_retrieved: 2026-04-16
+      notes: "ImmoScout24 Mietspiegel Q1/2026 Berlin avg 13.11 EUR/m² (outer-district Neukölln 12.34). 55m² 1-Zimmer × ~13.6 ≈ 750 EUR cold rent."
+  - item_id: rent_2br_good_area_capital
+    price: 1400
+    currency: EUR
+    unit: apartment/month
+    source:
+      url: https://www.immobilienscout24.de/immobilienpreise/berlin/berlin/mitte/mietspiegel
+      date_retrieved: 2026-04-16
+      notes: "ImmoScout24 Mietspiegel Mitte 2026 18.11 EUR/m², Prenzlauer Berg 15.82. 80m² 2-Zimmer × ~17.5 ≈ 1,400 EUR cold rent."
+  - item_id: apartment_purchase_price_per_m2_capital
+    price: 4174
+    currency: EUR
+    unit: EUR/m2
+    source:
+      url: https://atlas.immobilienscout24.de/orte/deutschland/berlin/berlin
+      date_retrieved: 2026-04-16
+      notes: "ImmoScout24 Preisatlas Berlin avg 4,174 EUR/m². Homeday shows 3,900."
+  - item_id: electricity_kwh
+    price: 0.4283
+    currency: EUR
+    unit: kWh
+    source:
+      url: https://www.verivox.de/strom/strompreisentwicklung/
+      date_retrieved: 2026-04-16
+      notes: "Verivox Q1/2026 Grundversorgung avg 42.83 ct/kWh. Market average ~32.8 ct; new-customer ~28 ct."
+  - item_id: gas_kwh
+    price: 0.136
+    currency: EUR
+    unit: kWh
+    source:
+      url: https://www.verivox.de/gas/gaspreisentwicklung/
+      date_retrieved: 2026-04-16
+      notes: "Verivox April 2026 Grundversorgung avg 13.6 ct/kWh; new-customer market ~11 ct."
+  - item_id: water_m3
+    price: 4.023
+    currency: EUR
+    unit: m3
+    source:
+      url: https://www.bwb.de/de/gebuehren.php
+      date_retrieved: 2026-04-16
+      notes: "Berliner Wasserbetriebe: Trinkwasser 1.813 + Schmutzwasser 2.210 = 4.023 EUR/m³ brutto."
+  - item_id: internet_100mbps_monthly
+    price: 39.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://o2.surfen-telefonieren.de/tarife/festnetz/dsl/o2-home-m-dsl
+      date_retrieved: 2026-04-16
+      notes: "O2 Home M DSL 100 Mbit/s regular price after first-year promo (promo 29.99 EUR). Vodafone GigaZuhause 100 comparable."
+  - item_id: public_transit_monthly_pass
+    price: 63.00
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.bvg.de/en/deutschland-ticket
+      date_retrieved: 2026-04-16
+      notes: "Deutschlandticket 63 EUR/month since 2026-01-01 (nationwide). Berlin AB monthly alternative 81.30 EUR."
+  - item_id: car_purchase_vw_golf_equivalent
+    price: 29395
+    currency: EUR
+    unit: car
+    source:
+      url: https://www.volkswagen.de/de/modelle/golf.html
+      date_retrieved: 2026-04-16
+      notes: "VW Golf 8 base 1.5 TSI 116 PS UVP incl. VAT."
+  - item_id: car_insurance_annual
+    price: 900
+    currency: EUR
+    unit: year
+    source:
+      url: https://www.huk24.de/autoversicherung/vollkasko
+      date_retrieved: 2026-04-16
+      notes: "HUK24 Vollkasko, VW Golf, 35yo Berlin (SF-Klasse ~10, 12,000 km/yr, 500 EUR SB). Midpoint of 800-1000 EUR/yr. Quote requires form."
+  - item_id: fuel_petrol_liter
+    price: 2.13
+    currency: EUR
+    unit: liter
+    source:
+      url: https://www.adac.de/news/aktueller-spritpreis/
+      date_retrieved: 2026-04-16
+      notes: "ADAC/Destatis Super E5 Tagesdurchschnitt end of March 2026. April trending 2.17-2.22 EUR/L after CO2 price change."
+  - item_id: bread_loaf_500g
+    price: 1.69
+    currency: EUR
+    unit: loaf
+    source:
+      url: https://shop.rewe.de/p/rewe-beste-wahl-buttertoast-500g/555945
+      date_retrieved: 2026-04-16
+      notes: "REWE Beste Wahl Buttertoast 500g. Ja! budget 0.99 EUR; typical Toastbrot ~1.69."
+  - item_id: milk_1l
+    price: 1.05
+    currency: EUR
+    unit: liter
+    source:
+      url: https://shop.rewe.de/p/ja-frische-vollmilch-3-5-1l/2865690
+      date_retrieved: 2026-04-16
+      notes: "REWE ja! Frische Vollmilch 3.5% 1L."
+  - item_id: eggs_10
+    price: 3.29
+    currency: EUR
+    unit: 10-pack
+    source:
+      url: https://www.rewe.de/shop/p/rewe-beste-wahl-eier-aus-freilandhaltung-10-stueck/8010549
+      date_retrieved: 2026-04-16
+      notes: "REWE Beste Wahl Eier aus Freilandhaltung 10 Stück."
+  - item_id: chicken_breast_1kg
+    price: 11.56
+    currency: EUR
+    unit: kg
+    source:
+      url: https://www.rewe.de/shop/c/huehnerfleisch/
+      date_retrieved: 2026-04-16
+      notes: "REWE ja! Hähnchenbrustfilet 250g = 2.89 EUR → 11.56 EUR/kg. Matches shelf range 10-13 EUR/kg."
+  - item_id: potatoes_1kg
+    price: 1.79
+    currency: EUR
+    unit: kg
+    source:
+      url: https://www.rewe.de/shop/p/kartoffeln-aus-der-region-1kg/2241614
+      date_retrieved: 2026-04-16
+      notes: "REWE Beste Wahl Speisekartoffeln 1kg, shelf non-promo."
+  - item_id: apples_1kg
+    price: 2.49
+    currency: EUR
+    unit: kg
+    source:
+      url: https://shop.rewe.de/p/rewe-regional-apfel-rot-1kg/1907470
+      date_retrieved: 2026-04-16
+      notes: "REWE Regional Apfel rot 1kg regular; Bio 3.49 EUR."
+  - item_id: pasta_500g
+    price: 2.69
+    currency: EUR
+    unit: pack
+    source:
+      url: https://www.rewe.de/shop/p/barilla-spaghetti-nr-5-500g/1483021
+      date_retrieved: 2026-04-16
+      notes: "Barilla Spaghetti Nr.5 500g at REWE regular shelf."
+  - item_id: coffee_ground_250g
+    price: 4.99
+    currency: EUR
+    unit: pack
+    source:
+      url: https://www.rewe.de/shop/p/jacobs-filterkaffee-kroenung-klassisch-500g/5175232
+      date_retrieved: 2026-04-16
+      notes: "Jacobs Krönung Klassisch 500g at REWE ~9.98 EUR; 250g-equivalent ~4.99 EUR."
+  - item_id: restaurant_mid_range_meal
+    price: 25
+    currency: EUR
+    unit: meal
+    source:
+      url: https://www.falstaff.com/de/listings/die-besten-10-restaurants-fuer-mittlere-preisklasse-in-berlin
+      date_retrieved: 2026-04-16
+      notes: "Falstaff Berlin mid-range Hauptgang 18-29 EUR + drink ~5 EUR. Representative 25 EUR."
+  - item_id: gym_monthly_membership
+    price: 29.00
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.fitx.de/mitgliedschaft
+      date_retrieved: 2026-04-16
+      notes: "FitX standard monthly; McFIT comparable 29.90 EUR regular."
+  - item_id: cinema_ticket
+    price: 12.90
+    currency: EUR
+    unit: ticket
+    source:
+      url: https://www.uci-kinowelt.de/kinoinformation/berlin-mercedes-platz/82
+      date_retrieved: 2026-04-16
+      notes: "UCI Kinowelt Berlin Preiskategorie 2 weekday; Sat/holidays 13.90 EUR."
+  - item_id: phone_plan_monthly
+    price: 19.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.vodafone.de/privat/handys-tablets-tarife/alle-tarife-mit-vertrag.html
+      date_retrieved: 2026-04-16
+      notes: "Vodafone GigaMobil XS 19.99 EUR/month: Allnet-Flat + 25 GB 5G (closest to 20 GB)."
+  - item_id: iphone_15_128gb
+    price: 699
+    currency: EUR
+    unit: unit
+    source:
+      url: https://www.apple.com/de/shop/buy-iphone/iphone-15/6,1%22-display-128gb-blau
+      date_retrieved: 2026-04-16
+      notes: "Apple DE list for iPhone 15 128GB. DE resellers 589-680 EUR."
+  - item_id: laptop_macbook_air_m3
+    price: 1299
+    currency: EUR
+    unit: unit
+    source:
+      url: https://www.apple.com/de/shop/buy-mac/macbook-air/13-zoll-m3
+      date_retrieved: 2026-04-16
+      notes: "Apple DE list MacBook Air 13 M3 8/256. Geizhals DE 874.95 EUR at resellers."
+  - item_id: netflix_standard_monthly
+    price: 13.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.netflix.com/signup?locale=de-DE
+      date_retrieved: 2026-04-16
+      notes: "Netflix Standard DE since April 2024; unchanged 2026."
+  - item_id: spotify_premium_monthly
+    price: 12.99
+    currency: EUR
+    unit: month
+    source:
+      url: https://www.spotify.com/de/premium/
+      date_retrieved: 2026-04-16
+      notes: "Spotify Premium Individual DE (increase August 2025)."
+  - item_id: intra_eu_flight_return
+    price: 180
+    currency: EUR
+    unit: return trip
+    source:
+      url: https://www.ryanair.com/flights/de/de/fluege-von-berlin-nach-bukarest
+      date_retrieved: 2026-04-16
+      notes: "Ryanair BER-OTP RT economy, realistic 3-week advance with checked bag. Lufthansa BER-CDG 234 EUR for reference."
+  - item_id: playstation_5_disc
+    price: 499.99
+    currency: EUR
+    unit: unit
+    source:
+      url: https://direct.playstation.com/de-de/consoles
+      date_retrieved: 2026-04-16
+      notes: "Sony Germany direct store, PS5 Slim disc edition, 2026 list price."
+  - item_id: big_mac
+    price: 5.50
+    currency: EUR
+    unit: unit
+    source:
+      url: https://www.mcdonalds.com/de/de-de/menu/big-mac.html
+      date_retrieved: 2026-04-16
+      notes: "McDonald's Germany Big Mac standalone, approximate 2026 shelf price."
+  - item_id: vacation_week_abroad
+    price: 1100
+    currency: EUR
+    unit: trip
+    source:
+      url: https://www.tui.com/pauschalreisen/spanien/mallorca/
+      date_retrieved: 2026-04-16
+      notes: "TUI Mallorca 1-week packages from 481 EUR/pp; mid-tier 4-star 2 persons ~1,100 EUR. May 2026 shoulder season."

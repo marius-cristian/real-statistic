@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Real purchasing power: RO vs FR vs DE (technical)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --ro: #ce1126;
+    --fr: #0055a4;
+    --de: #ffce00;
+    --fg: #1a1a1a;
+    --bg: #fafafa;
+    --muted: #666;
+    --card: #fff;
+    --border: #e5e5e5;
+    --warn: #c1121f;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--fg); margin: 0; padding: 0 1rem 4rem;
+    line-height: 1.5;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin: 2rem 0 0.25rem; }
+  h2 { font-size: 1.3rem; margin: 2.5rem 0 0.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.25rem; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; color: var(--muted); font-weight: 600; }
+  p.lede { color: var(--muted); margin: 0 0 1rem; font-size: 1.05rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+  .pull-quote { border-left: 4px solid var(--warn); padding: 0.5rem 1rem; background: #fff6f6; font-style: italic; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+  th, td { padding: 0.4rem 0.6rem; text-align: right; border-bottom: 1px solid var(--border); }
+  th:first-child, td:first-child { text-align: left; }
+  th { background: #f0f0f0; font-weight: 600; }
+  .cell-hot { background: #c1121f; color: #fff; }
+  .cell-warm { background: #f08080; }
+  .cell-mid { background: #ffd8a8; }
+  .cell-cool { background: #a8dadc; }
+  .cell-cold { background: #457b9d; color: #fff; }
+  .chart-wrap { position: relative; height: 360px; }
+  .small { font-size: 0.85rem; color: var(--muted); }
+  a { color: #0b66c3; }
+  details { margin: 1rem 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  .footnote { color: var(--muted); font-size: 0.85rem; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+  .kpi { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; }
+  .kpi .label { font-size: 0.8rem; text-transform: uppercase; color: var(--muted); }
+  .kpi .value { font-size: 1.6rem; font-weight: 700; }
+  .kpi .sub { font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: var(--muted);">Plain-language version: <a href="index.html">RO</a> &middot; <a href="en.html">EN</a> &middot; <a href="https://github.com/marius-cristian/real-statistic" target="_blank">GitHub</a></p>
+<h1>Real purchasing power: Romania, France, Germany</h1>
+<p class="lede">A basket-based experiment testing whether the Eurostat "Romania is at 78% of EU average" narrative matches what a median net salary actually buys.</p>
+
+<div class="card" style="border-left: 4px solid var(--warn); background: #fff6f6;">
+<h3 style="margin-top: 0; color: var(--warn);">Where reality deviates from the EU statistic</h3>
+<p style="margin-top: 0;">Eurostat publishes one number: GDP per capita in PPS, EU27=100. Romania sits at 77. This project recomputes real purchasing power per basket, and the answer changes depending on what you buy.</p>
+<div id="headline-deviation-kpis" class="kpi-grid" style="margin: 0.5rem 0;"></div>
+<p class="small" style="margin-bottom: 0;">Positive = PPS flatters that country for that basket. Negative = PPS understates. For <em>global</em> (tradables like iPhones, laptops, flights) the PPS illusion is at its worst: prices barely vary across the EU, so the "cheap country" adjustment collapses.</p>
+</div>
+
+<div class="card pull-quote">
+"Foarte important: asta NU &icirc;nseamnă salariul mediu și nici c&acirc;ți bani are fiecare rom&acirc;n &icirc;n buzunar."
+<br>
+<span class="small">A common framing of the PPS finding. The disclaimer is correct. The question: how far does the PPS number drift from lived reality once we pick an explicit basket?</span>
+</div>
+
+<div class="card" style="border-left: 4px solid #f6a700; background: #fffaf0;">
+<strong>Caveats the numbers cannot fix.</strong>
+<ul>
+<li><strong>Capital-density premium.</strong> Paris rent is about 2&times; the French national average per m&sup2;. Berlin sits closer to the German urban average. Bucharest is close to the Romanian national rent average. So <em>housing</em> and <em>middle_class</em> baskets exaggerate Romania's housing gap somewhat.</li>
+<li><strong>Amenity value.</strong> Paris (and Berlin, and Bucharest in its own way) deliver cultural density, gastronomy, landmarks, luxury retail, and scene access that baskets cannot price. Part of what Parisians pay for rent is proximity to all of that, not pure cost-of-living. The same applies everywhere in degrees.</li>
+<li><strong>Clean read.</strong> The <em>global</em> basket (iPhone, laptop, flights, streaming) contains no rent and no amenities, only tradables. That is where the PPS narrative is most cleanly testable.</li>
+</ul>
+</div>
+
+<h2>1 &middot; The official claim, reproduced from raw inputs</h2>
+<p>We take Eurostat's GDP, population, and PPP series and recompute the "% of EU27" index ourselves. If we cannot reproduce the number, any critique is unearned.</p>
+<div class="card">
+  <table id="pps-reproduction-table">
+    <thead><tr><th>Country</th><th>Eurostat official (EU27=100)</th><th>Our reproduction</th><th>&Delta; pp</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<h2>2 &middot; Median net monthly salary</h2>
+<div class="kpi-grid" id="salary-kpis"></div>
+<p class="footnote" id="salary-sources"></p>
+
+<h2>3 &middot; Basket cost at local retailers</h2>
+<p>Same canonical item list, same quantities, priced at each country's actual retailers. Converted to EUR at ECB reference rates.</p>
+<div class="card chart-wrap"><canvas id="basket-cost-chart"></canvas></div>
+
+<h2>4 &middot; Baskets per month: the cross-country cube</h2>
+<p>Rows are the salary country (who earns the median). Columns are the pricing country (where they shop). Cells show how many full baskets of the labelled type that salary buys per month.</p>
+<div id="bpm-tables"></div>
+
+<h2>5 &middot; Relative purchasing power (anchor: DE on DE prices, middle-class = 100)</h2>
+<div class="card chart-wrap"><canvas id="rpp-chart"></canvas></div>
+
+<h2>6 &middot; Where PPS overstates reality</h2>
+<p>Official GDP-per-capita PPS index vs our basket-based equivalent, same-country in same-country, rebased so DE matches its official index. Positive bars mean PPS flatters that country for that basket.</p>
+<div class="card chart-wrap"><canvas id="divergence-chart"></canvas></div>
+
+<h2>7 &middot; What can the other guy afford at my prices?</h2>
+<p>Each cell is the percent of the pricing-country's own domestic basket that the salary country's median net can buy. 100 = same as a local. Below 100 = visitor is poorer than the local; above 100 = richer.</p>
+<div id="cross-index-tables"></div>
+
+<h2>8 &middot; Reality vs the EU statistic</h2>
+<div class="card">
+<p><strong>The 77% figure is real, and the pipeline reproduces it from raw Eurostat inputs within &plusmn;1 pp.</strong> The dispute is not with the math. It is with the interpretation.</p>
+<ol>
+<li><strong>For tradables, PPS is misleading.</strong> A Romanian median net buys fewer iPhones, laptops, or EU flights per month than a German or French one, by the ratio of their salaries, because tradables cost almost the same across the EU. The PPS "cheap country" adjustment evaporates as soon as the basket contains anything traded. Our <em>global</em> basket shows a divergence of roughly +29 pp for RO and +33 pp for FR; both countries are flattered by PPS when it comes to goods shipped in from abroad.</li>
+<li><strong>For a middle-class lifestyle, PPS is close but slightly optimistic.</strong> Rent, car, groceries, and some services come out near the PPS number for RO (about +2 pp). Not a scandal, but not the "78% of EU average lifestyle" either. It is 78% of a heavily domestic-biased basket.</li>
+<li><strong>Paris distorts the French picture.</strong> Housing-only divergence is +50 pp for FR, because Paris rent is not a French-national number. It is a global-city premium. A similar effect would appear for London or Zurich. It does not appear for Berlin or Bucharest to the same degree.</li>
+<li><strong>Housing in Bucharest is genuinely cheap.</strong> About 9 pp of <em>understatement</em> on housing for RO, the only place PPS understates Romanian purchasing power. This is why PPS looks good for RO overall: the housing tailwind compensates for the tradables headwind in the aggregate.</li>
+</ol>
+<p>The common caveat (<em>"nu &icirc;nseamnă salariul mediu și nici c&acirc;ți bani are fiecare rom&acirc;n &icirc;n buzunar"</em>) is literally true. What the data shows is stronger. The PPS number is correctly computed, but it averages across basket types with very different reality-checks. Telling a Romanian shopping for a laptop that they are "at 78% of EU average" is not supported by what that laptop actually costs them in hours worked.</p>
+</div>
+
+<h2>9 &middot; Methodology and sources</h2>
+<details open>
+<summary>Formulas</summary>
+<pre class="small">
+basket_cost_local[b, pc] = Sum of price[i, pc] * quantity[i, b]
+basket_cost_eur[b, pc]   = basket_cost_local[b, pc] * fx[pc -&gt; EUR]
+net_eur[c]               = net[c] * fx[c -&gt; EUR]
+bpm[b, sc, pc]           = net_eur[sc] / basket_cost_eur[b, pc]
+rpp[b, sc, pc]           = 100 * bpm[b, sc, pc] / bpm[middle_class, DE, DE]
+divergence[b, c]         = official_index[c] - rebased_bpm[b, c, c]
+cross_index[b, sc, pc]   = 100 * bpm[b, sc, pc] / bpm[b, pc, pc]
+</pre>
+</details>
+<details>
+<summary>Basket definitions</summary>
+<div id="basket-definitions"></div>
+</details>
+<details>
+<summary>Item prices (per country)</summary>
+<div id="price-tables"></div>
+</details>
+
+<p class="footnote">See METHODOLOGY.md and SOURCES.md in the repo for the full audit trail. Every price, salary, and macro input is cited there with a URL and retrieval date.</p>
+
+</div>
+
+<script>
+const DATA = {{ data_json | safe }};
+
+const fmt = (n, digits = 1) => {
+  if (n === null || n === undefined || Number.isNaN(n)) return "\u2014";
+  return Number(n).toLocaleString("en-GB", {
+    maximumFractionDigits: digits, minimumFractionDigits: digits,
+  });
+};
+const country_colors = { RO: "#ce1126", FR: "#0055a4", DE: "#ffce00", EU27: "#666" };
+
+// Headline deviation KPI cards.
+(() => {
+  const grid = document.getElementById("headline-deviation-kpis");
+  const makeCard = (basket, country) => {
+    const d = DATA.divergence?.[basket]?.[country] ?? null;
+    const c_bpm = DATA.baskets_per_month?.[basket]?.[country]?.[country] ?? null;
+    const de_bpm = DATA.baskets_per_month?.[basket]?.["DE"]?.["DE"] ?? null;
+    const rel = de_bpm ? 100 * (c_bpm / de_bpm) : null;
+    const col = d > 10 ? "#c1121f" : d < -5 ? "#2a7f3a" : "#444";
+    return `<div class="kpi" style="border-top: 4px solid ${col};">
+      <div class="label">${country} &middot; ${basket.replace(/_/g, " ")}</div>
+      <div class="value" style="color: ${col};">${d >= 0 ? "+" : ""}${fmt(d, 1)} pp</div>
+      <div class="sub">Real PP vs DE: ${fmt(rel, 0)} &middot; PPS says ${fmt(DATA.reproduced_pps_index[country], 1)}</div>
+    </div>`;
+  };
+  grid.innerHTML = [
+    makeCard("global", "RO"),
+    makeCard("middle_class", "RO"),
+    makeCard("housing_only", "FR"),
+    makeCard("global", "FR"),
+  ].join("");
+})();
+
+// PPS reproduction table.
+(() => {
+  const tbody = document.querySelector("#pps-reproduction-table tbody");
+  for (const [code, row] of Object.entries(DATA.macro)) {
+    const rep = DATA.reproduced_pps_index[code];
+    const delta = rep - row.official_gdp_pps_index;
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${code}</td><td>${fmt(row.official_gdp_pps_index)}</td><td>${fmt(rep)}</td><td>${fmt(delta, 2)}</td>`;
+    tbody.appendChild(tr);
+  }
+})();
+
+// Salary KPI cards.
+(() => {
+  const grid = document.getElementById("salary-kpis");
+  const sources = [];
+  for (const s of DATA.salaries) {
+    const eur = DATA.salary_net_eur[s.country];
+    const div = document.createElement("div");
+    div.className = "kpi";
+    div.innerHTML = `
+      <div class="label">${s.country} median net / month</div>
+      <div class="value">${fmt(s.median_net_monthly, 0)} ${s.currency}</div>
+      <div class="sub">${fmt(eur, 0)} EUR &middot; ${s.year}</div>
+    `;
+    grid.appendChild(div);
+    sources.push(`<a href="${s.source_url}" target="_blank">${s.country} salary source</a>`);
+  }
+  document.getElementById("salary-sources").innerHTML = "Sources: " + sources.join(" &middot; ");
+})();
+
+// Basket cost chart.
+(() => {
+  const ctx = document.getElementById("basket-cost-chart");
+  const countries = DATA.meta.countries.filter(c => c !== "EU27");
+  const baskets = DATA.meta.basket_names;
+  const datasets = countries.map(c => ({
+    label: c,
+    backgroundColor: country_colors[c],
+    data: baskets.map(b => DATA.basket_cost_eur?.[b]?.[c] ?? null),
+  }));
+  new Chart(ctx, {
+    type: "bar",
+    data: { labels: baskets, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { title: { display: true, text: "Basket cost per month (EUR)" }, legend: { position: "bottom" } },
+      scales: { y: { beginAtZero: true, title: { display: true, text: "EUR/month" } } },
+    },
+  });
+})();
+
+// Baskets-per-month tables, one per basket.
+(() => {
+  const host = document.getElementById("bpm-tables");
+  const baskets = DATA.meta.basket_names;
+  const countries = ["RO", "FR", "DE"];
+  const classify = (v, pivot = 1.0) => {
+    if (v === null || v === undefined || Number.isNaN(v)) return "";
+    if (v >= pivot * 3) return "cell-cold";
+    if (v >= pivot * 1.5) return "cell-cool";
+    if (v >= pivot * 0.6) return "cell-mid";
+    if (v >= pivot * 0.25) return "cell-warm";
+    return "cell-hot";
+  };
+  for (const b of baskets) {
+    const bpmBasket = DATA.baskets_per_month?.[b] ?? {};
+    const pivot = (bpmBasket["DE"] && bpmBasket["DE"]["DE"]) || 1.0;
+    let html = `<h3>${b.replace(/_/g, " ")}</h3><div class="card"><table><thead><tr><th>salary / prices at</th>`;
+    for (const pc of countries) html += `<th>${pc}</th>`;
+    html += "</tr></thead><tbody>";
+    for (const sc of countries) {
+      html += `<tr><th>${sc}</th>`;
+      for (const pc of countries) {
+        const v = bpmBasket[sc]?.[pc];
+        html += `<td class="${classify(v, pivot)}">${fmt(v, 2)}</td>`;
+      }
+      html += "</tr>";
+    }
+    html += "</tbody></table></div>";
+    host.insertAdjacentHTML("beforeend", html);
+  }
+})();
+
+// Relative purchasing power chart.
+(() => {
+  const ctx = document.getElementById("rpp-chart");
+  const baskets = DATA.meta.basket_names;
+  const rows = [];
+  const countries = ["RO", "FR", "DE"];
+  for (const sc of countries) for (const pc of countries) rows.push([sc, pc]);
+  const datasets = rows.map(([sc, pc]) => ({
+    label: `${sc} @ ${pc} prices`,
+    backgroundColor: country_colors[sc],
+    borderColor: country_colors[pc],
+    borderWidth: 2,
+    data: baskets.map(b => DATA.rpp?.[b]?.[sc]?.[pc] ?? null),
+  }));
+  new Chart(ctx, {
+    type: "bar",
+    data: { labels: baskets, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        title: { display: true, text: "Relative purchasing power (DE@DE / middle-class = 100)" },
+        legend: { position: "bottom" },
+      },
+      scales: { y: { beginAtZero: true, title: { display: true, text: "Index (DE@DE / middle_class = 100)" } } },
+    },
+  });
+})();
+
+// Divergence chart.
+(() => {
+  const ctx = document.getElementById("divergence-chart");
+  const baskets = DATA.meta.basket_names;
+  const countries = ["RO", "FR", "DE"];
+  const datasets = countries.map(c => ({
+    label: c,
+    backgroundColor: country_colors[c],
+    data: baskets.map(b => DATA.divergence?.[b]?.[c] ?? null),
+  }));
+  new Chart(ctx, {
+    type: "bar",
+    data: { labels: baskets, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        title: { display: true, text: "PPS minus RPP (positive = PPS overstates)" },
+        legend: { position: "bottom" },
+      },
+      scales: { y: { title: { display: true, text: "percentage points" } } },
+    },
+  });
+})();
+
+// Cross-index tables.
+(() => {
+  const host = document.getElementById("cross-index-tables");
+  const baskets = DATA.meta.basket_names;
+  const countries = ["RO", "FR", "DE"];
+  const classify = (v) => {
+    if (v === null || v === undefined || Number.isNaN(v)) return "";
+    if (v >= 200) return "cell-cold";
+    if (v >= 100) return "cell-cool";
+    if (v >= 60) return "cell-mid";
+    if (v >= 30) return "cell-warm";
+    return "cell-hot";
+  };
+  for (const b of baskets) {
+    let html = `<h3>${b.replace(/_/g, " ")}</h3><div class="card"><table><thead><tr><th>salary / prices at</th>`;
+    for (const pc of countries) html += `<th>${pc}</th>`;
+    html += "</tr></thead><tbody>";
+    for (const sc of countries) {
+      html += `<tr><th>${sc}</th>`;
+      for (const pc of countries) {
+        const v = DATA.cross_index?.[b]?.[sc]?.[pc];
+        html += `<td class="${classify(v)}">${fmt(v, 0)}</td>`;
+      }
+      html += "</tr>";
+    }
+    html += "</tbody></table></div>";
+    host.insertAdjacentHTML("beforeend", html);
+  }
+})();
+
+// Basket definitions (folded).
+(() => {
+  const host = document.getElementById("basket-definitions");
+  for (const b of DATA.baskets) {
+    let html = `<h3>${b.name}</h3><p class="small">${b.description}</p><table><thead><tr><th>item</th><th>description</th><th>monthly qty</th></tr></thead><tbody>`;
+    for (const [item_id, qty] of Object.entries(b.items)) {
+      html += `<tr><td>${item_id}</td><td>${DATA.items[item_id] ?? ""}</td><td>${fmt(qty, 2)}</td></tr>`;
+    }
+    html += "</tbody></table>";
+    host.insertAdjacentHTML("beforeend", html);
+  }
+})();
+
+// Per-country price tables (folded).
+(() => {
+  const host = document.getElementById("price-tables");
+  for (const [country, rows] of Object.entries(DATA.prices)) {
+    let html = `<h3>${country}</h3><table><thead><tr><th>item_id</th><th>price</th><th>unit</th><th>source</th></tr></thead><tbody>`;
+    for (const r of rows) {
+      html += `<tr><td>${r.item_id}</td><td>${fmt(r.price, 2)} ${r.currency}</td><td>${r.unit}</td><td><a href="${r.source_url}" target="_blank">link</a></td></tr>`;
+    }
+    html += "</tbody></table>";
+    host.insertAdjacentHTML("beforeend", html);
+  }
+})();
+</script>
+</body>
+</html>

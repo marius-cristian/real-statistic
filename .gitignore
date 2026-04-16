@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated artifacts are committed so GitHub Pages can serve them from /docs.
+# Re-enable these lines if you prefer Pages to be rebuilt by CI instead.
+# docs/data.json
+# docs/index.html
+# docs/en.html
+# docs/technical.html
+
+# macOS / editors.
+.DS_Store
+.idea/
+.vscode/

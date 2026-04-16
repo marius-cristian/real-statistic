@@ -1,0 +1,76 @@
+# Macroeconomic inputs. Values allow reproduction of Eurostat's official
+# GDP-per-capita-PPS index (EU27_2020 = 100) within +/- 1pp. See validate.py.
+#
+# PPP here is expressed as "EUR of local real purchasing power per 1 PPS".
+# For EU-euro members it reduces to PLI/100. For Romania, whose GDP Eurostat
+# publishes in EUR (converted from RON at market rates), we also express PPP
+# in EUR/PPS terms so the formula
+#
+#     GDP_per_capita_PPS = GDP_EUR * 1e6 / pop / PPP
+#
+# works uniformly across the four rows below.
+
+countries:
+  RO:
+    year: 2024
+    gdp_nominal_eur_millions: 353633.1
+    population: 19036031
+    ppp: 0.597
+    price_level_index: 59.7
+    official_gdp_pps_index: 77.0
+    source:
+      url: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.RO/?startPeriod=2024&endPeriod=2024&format=sdmx-csv
+      date_retrieved: 2026-04-16
+      notes: "GDP from Eurostat nama_10_gdp (SDMX-CSV API). Population 1 Jan 2025 from Eurostat demo_pjan (via Wikipedia Demographics of the EU cite). PLI from prc_ppp_ind (EU27_2020=100), 2024. PPP derived as PLI/100 (EUR/PPS convention, since GDP is reported in EUR). Official PPS index 77.0 from Eurostat statistics-explained GDP per capita article, 2024 preliminary."
+
+  FR:
+    year: 2024
+    gdp_nominal_eur_millions: 2919899.9
+    population: 68635943
+    ppp: 1.089
+    price_level_index: 108.9
+    official_gdp_pps_index: 98.2
+    source:
+      url: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.FR/?startPeriod=2024&endPeriod=2024&format=sdmx-csv
+      date_retrieved: 2026-04-16
+      notes: "Same pipeline as RO. Eurostat nama_10_gdp, demo_pjan, prc_ppp_ind."
+
+  DE:
+    year: 2024
+    gdp_nominal_eur_millions: 4328970.0
+    population: 83577140
+    ppp: 1.117
+    price_level_index: 111.7
+    official_gdp_pps_index: 116.1
+    source:
+      url: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.DE/?startPeriod=2024&endPeriod=2024&format=sdmx-csv
+      date_retrieved: 2026-04-16
+      notes: "Same pipeline as RO. Eurostat nama_10_gdp, demo_pjan, prc_ppp_ind."
+
+  EU27:
+    year: 2024
+    gdp_nominal_eur_millions: 18019662.3
+    population: 450380320
+    ppp: 1.0
+    price_level_index: 100.0
+    official_gdp_pps_index: 100.0
+    source:
+      url: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.EU27_2020/?startPeriod=2024&endPeriod=2024&format=sdmx-csv
+      date_retrieved: 2026-04-16
+      notes: "EU27_2020 aggregate. By construction PPP=1 and index=100 at the EU27 baseline."
+
+fx_rates:
+  - pair: EUR_RON
+    rate: 5.0911
+    date: 2026-04-15
+    source:
+      url: https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml
+      date_retrieved: 2026-04-16
+      notes: "ECB reference rate, daily XML feed."
+  - pair: EUR_EUR
+    rate: 1.0
+    date: 2026-04-15
+    source:
+      url: https://www.ecb.europa.eu/
+      date_retrieved: 2026-04-16
+      notes: "Identity rate. EUR is the reference currency for this project."

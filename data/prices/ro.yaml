@@ -1,0 +1,250 @@
+country: RO
+prices:
+  - item_id: rent_1br_outside_center_capital
+    price: 400
+    currency: EUR
+    unit: apartment/month
+    source:
+      url: https://www.storia.ro/ro/rezultate/inchiriere/apartament/bucuresti
+      date_retrieved: 2026-04-16
+      notes: "Median asking rent for garsoniera outside Sector 1 (Storia/ZF Jan 2026 sector index); S3/S6 ~350-400 EUR, overall Bucharest avg ~400 EUR."
+  - item_id: rent_2br_good_area_capital
+    price: 600
+    currency: EUR
+    unit: apartment/month
+    source:
+      url: https://www.storia.ro/ro/rezultate/inchiriere/apartament/bucuresti
+      date_retrieved: 2026-04-16
+      notes: "Median of Storia/ZF Jan 2026 sector data: S1 695, S2 680, S3 550, S4 520, S5 595, S6 530 EUR. Median ~595 rounded to 600."
+  - item_id: apartment_purchase_price_per_m2_capital
+    price: 1733
+    currency: EUR
+    unit: EUR/m2
+    source:
+      url: https://sonarhome.ro/preturile-apartamentelor/bucuresti
+      date_retrieved: 2026-04-16
+      notes: "SonarHome Bucharest avg April 2026 = 1,733 EUR/m² (range S4 1,477 to S1 2,399)."
+  - item_id: electricity_kwh
+    price: 1.10
+    currency: RON
+    unit: kWh
+    source:
+      url: https://www.electricafurnizare.ro/app/uploads/2025/12/Oferta-energie-electrica-SU-clienti-casnici-01.01.2026.pdf
+      date_retrieved: 2026-04-16
+      notes: "Electrica Furnizare Serviciu Universal 01.01.2026, all-in delivered residential price estimate ~1.03-1.15 RON/kWh (active energy + distribution + 21% VAT). Midpoint 1.10."
+  - item_id: gas_kwh
+    price: 0.31
+    currency: RON
+    unit: kWh
+    source:
+      url: https://www.engie.ro/plafonare/
+      date_retrieved: 2026-04-16
+      notes: "Residential capped price (OUG 12/2026), 0.310 RON/kWh incl. VAT."
+  - item_id: water_m3
+    price: 11.58
+    currency: RON
+    unit: m3
+    source:
+      url: https://www.apanovabucuresti.ro/informatii-utile/tarife-si-facturi/tarife-pentru-consum-apa-si-canalizare
+      date_retrieved: 2026-04-16
+      notes: "Apa Nova Bucuresti, from 01.10.2025: potable 7.58 + sewerage 4.00 = 11.58 RON/m³ incl. VAT."
+  - item_id: internet_100mbps_monthly
+    price: 30.50
+    currency: RON
+    unit: month
+    source:
+      url: https://www.digi.ro/servicii/internet/internet-fix
+      date_retrieved: 2026-04-16
+      notes: "Digi FiberLink 500 (500 Mbps) entry plan = 30.50 RON/month. Covers the 100 Mbps+ threshold."
+  - item_id: public_transit_monthly_pass
+    price: 100
+    currency: RON
+    unit: month
+    source:
+      url: https://www.stb.ro/tarife
+      date_retrieved: 2026-04-16
+      notes: "STB monthly pass, all surface lines, 2026 tariff. Integrated STB + Metrorex is 160 RON."
+  - item_id: car_purchase_vw_golf_equivalent
+    price: 13490
+    currency: EUR
+    unit: car
+    source:
+      url: https://www.dacia.ro/gama-dacia/sandero/versiuni-si-preturi.html
+      date_retrieved: 2026-04-16
+      notes: "Dacia Sandero Essential 2026 base price, used as local C-segment equivalent. A VW Golf in RO starts around 28,000 EUR but is not the typical local new-car benchmark."
+  - item_id: car_insurance_annual
+    price: 3500
+    currency: RON
+    unit: year
+    source:
+      url: https://pret-asigurare.ro/rca/bucuresti/
+      date_retrieved: 2026-04-16
+      notes: "Combined RCA (~680 RON/yr for Groupama 1400-2000cc Bucharest) + CASCO full cover (~2,500-3,000 RON). Total 3,500 RON is midpoint."
+  - item_id: fuel_petrol_liter
+    price: 8.93
+    currency: RON
+    unit: liter
+    source:
+      url: https://pretcarburant.ro/retea/omv
+      date_retrieved: 2026-04-16
+      notes: "National avg Benzina Standard 95 on 14.04.2026 (OMV 8.83, Petrom 8.72)."
+  - item_id: bread_loaf_500g
+    price: 4.50
+    currency: RON
+    unit: loaf
+    source:
+      url: https://carrefour.ro/bacanie-carrefour/alimente/paine-si-specialitati
+      date_retrieved: 2026-04-16
+      notes: "Carrefour/Mega Image 500g franzela range 2.60-9.50 RON depending on brand. Mid-range ~4.50 RON."
+  - item_id: milk_1l
+    price: 6.50
+    currency: RON
+    unit: liter
+    source:
+      url: https://carrefour.ro/bacanie-carrefour/alimente/lapte-si-derivate-lapte-uht
+      date_retrieved: 2026-04-16
+      notes: "Zuzu 1.5% fat 1L ~6.50 RON; Carrefour own UHT is 4.75 RON."
+  - item_id: eggs_10
+    price: 15.99
+    currency: RON
+    unit: 10-pack
+    source:
+      url: https://carrefour.ro/produse/oua-marimea-m-10-bucati-carrefour-1657-15509148/
+      date_retrieved: 2026-04-16
+      notes: "Carrefour own-label size M 10-pack, typical April 2026 RO shelf range ~15-17 RON."
+  - item_id: chicken_breast_1kg
+    price: 41.60
+    currency: RON
+    unit: kg
+    source:
+      url: https://www.bringo.ro/ro/stores/carrefour_hipermarket/pui-intreg-si-piese-4/products/Piept-de-pui-dezosat-Fragedo-per-kg-55000217-2-ro/62172
+      date_retrieved: 2026-04-16
+      notes: "Fragedo Transavia piept pui dezosat, Carrefour assortment via Bringo."
+  - item_id: potatoes_1kg
+    price: 4.50
+    currency: RON
+    unit: kg
+    source:
+      url: https://www.ofertelecatalog.ro/oferte/cartofi/carrefour
+      date_retrieved: 2026-04-16
+      notes: "Regular table potatoes at Carrefour April 2026 ~3.99-4.99 RON/kg."
+  - item_id: apples_1kg
+    price: 3.65
+    currency: RON
+    unit: kg
+    source:
+      url: https://www.bringo.ro/ro/stores/carrefour_hipermarket/8/products/Mere-Golden-Romania-Filiera-Calitatii-Carrefour-per-kg-22502705-2-ro/247861
+      date_retrieved: 2026-04-16
+      notes: "Mere Golden Romania Filiera Calitatii Carrefour per kg."
+  - item_id: pasta_500g
+    price: 6.09
+    currency: RON
+    unit: pack
+    source:
+      url: https://carrefour.ro/produse/spaghete-nr-5-barilla-500g-19-11004101
+      date_retrieved: 2026-04-16
+      notes: "Barilla Spaghete nr.5 500g shelf price."
+  - item_id: coffee_ground_250g
+    price: 20.99
+    currency: RON
+    unit: pack
+    source:
+      url: https://carrefour.ro/produse/cafea-macinata-jacobs-kronung-alintaroma-250-g-19-11005416
+      date_retrieved: 2026-04-16
+      notes: "Jacobs Kronung Alintaroma 250g (promo; regular 24.99 RON)."
+  - item_id: restaurant_mid_range_meal
+    price: 85
+    currency: RON
+    unit: meal
+    source:
+      url: https://www.bucuresti.ro/articole/de-la-shaorma-la-fine-dining-cat-costa-sa-mananci-in-oras-in-bucuresti-589
+      date_retrieved: 2026-04-16
+      notes: "Bucharest mid-range mains 50-120 RON + drink 15-25 RON; midpoint main+drink ~85 RON."
+  - item_id: gym_monthly_membership
+    price: 250
+    currency: RON
+    unit: month
+    source:
+      url: https://www.worldclass.ro/abonamente/
+      date_retrieved: 2026-04-16
+      notes: "World Class Gold monthly Bucharest, midpoint of 230-270 RON depending on club."
+  - item_id: cinema_ticket
+    price: 32.50
+    currency: RON
+    unit: ticket
+    source:
+      url: https://www.cinemacity.ro/magnoliaPublic/dam/jcr:688522ef-d468-409c-9251-da9efb5c357e
+      date_retrieved: 2026-04-16
+      notes: "Cinema City 2D adult evening ticket Fri-Sun. Mon-Thu after 5pm = 28 RON."
+  - item_id: phone_plan_monthly
+    price: 25
+    currency: RON
+    unit: month
+    source:
+      url: https://www.digi.ro/servicii/telefonie-mobila/optim/digi-mobil-optim-nelimitat
+      date_retrieved: 2026-04-16
+      notes: "Digi Mobil Optim Nelimitat, unlimited voice + 200 GB data, ~5.08 EUR/month ≈ 25 RON."
+  - item_id: iphone_15_128gb
+    price: 3199.90
+    currency: RON
+    unit: unit
+    source:
+      url: https://altex.ro/telefon-apple-iphone-15-5g-128gb-black/cpd/SMTIP151BK/
+      date_retrieved: 2026-04-16
+      notes: "Altex authorized RO reseller. No direct Apple Store in RO."
+  - item_id: laptop_macbook_air_m3
+    price: 5499.99
+    currency: RON
+    unit: unit
+    source:
+      url: https://istyle.ro/mac/macbook-air/macbook-air-13-m3.html
+      date_retrieved: 2026-04-16
+      notes: "iSTYLE Apple Premium Partner RO, MacBook Air 13 M3 8/256 starting price."
+  - item_id: netflix_standard_monthly
+    price: 54.95
+    currency: RON
+    unit: month
+    source:
+      url: https://help.netflix.com/en/node/24926
+      date_retrieved: 2026-04-16
+      notes: "Netflix Standard RO = 10.99 EUR/month ≈ 54.95 RON."
+  - item_id: spotify_premium_monthly
+    price: 26
+    currency: RON
+    unit: month
+    source:
+      url: https://www.spotify.com/ro-ro/premium/
+      date_retrieved: 2026-04-16
+      notes: "Spotify Premium Individual RO, 26 RON/month."
+  - item_id: intra_eu_flight_return
+    price: 750
+    currency: RON
+    unit: return trip
+    source:
+      url: https://www.wizzair.com/ro-ro/zboruri-ieftine-din-bucuresti-spre-frankfurt-pe-main
+      date_retrieved: 2026-04-16
+      notes: "Wizz Air OTP-FRA 3-week advance economy RT incl. small bag, midpoint 650-900 RON ≈ 750."
+  - item_id: playstation_5_disc
+    price: 2999
+    currency: RON
+    unit: unit
+    source:
+      url: https://altex.ro/consola-sony-playstation-5-slim-disc-edition-1tb-alba/cpd/GAMPS5DISCCSLM/
+      date_retrieved: 2026-04-16
+      notes: "Altex RO, PS5 Slim disc 1TB, standard shelf price April 2026."
+  - item_id: big_mac
+    price: 22
+    currency: RON
+    unit: unit
+    source:
+      url: https://www.mcdonalds.ro/meniu/burger-carne-de-vita/big-mac
+      date_retrieved: 2026-04-16
+      notes: "McDonald's Romania Big Mac standalone, approximate 2026 shelf price."
+  - item_id: vacation_week_abroad
+    price: 3600
+    currency: RON
+    unit: trip
+    source:
+      url: https://www.vacantesmart.ro/Turcia-155-7699/Antalya-693-7701/sejururi-cu-avionul
+      date_retrieved: 2026-04-16
+      notes: "Antalya AI 7-night charter package ex-Bucharest, 2 persons mid-tier, shoulder-season ~3,600 RON."

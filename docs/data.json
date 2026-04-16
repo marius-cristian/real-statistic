@@ -1,0 +1,1400 @@
+{
+  "meta": {
+    "countries": [
+      "RO",
+      "FR",
+      "DE",
+      "EU27"
+    ],
+    "basket_names": [
+      "survival",
+      "middle_class",
+      "global",
+      "housing_only"
+    ]
+  },
+  "macro": {
+    "RO": {
+      "year": 2024,
+      "gdp_nominal_eur_millions": 353633.1,
+      "population": 19036031,
+      "ppp": 0.597,
+      "price_level_index": 59.7,
+      "official_gdp_pps_index": 77.0,
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.RO/?startPeriod=2024&endPeriod=2024&format=sdmx-csv"
+    },
+    "FR": {
+      "year": 2024,
+      "gdp_nominal_eur_millions": 2919899.9,
+      "population": 68635943,
+      "ppp": 1.089,
+      "price_level_index": 108.9,
+      "official_gdp_pps_index": 98.2,
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.FR/?startPeriod=2024&endPeriod=2024&format=sdmx-csv"
+    },
+    "DE": {
+      "year": 2024,
+      "gdp_nominal_eur_millions": 4328970.0,
+      "population": 83577140,
+      "ppp": 1.117,
+      "price_level_index": 111.7,
+      "official_gdp_pps_index": 116.1,
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.DE/?startPeriod=2024&endPeriod=2024&format=sdmx-csv"
+    },
+    "EU27": {
+      "year": 2024,
+      "gdp_nominal_eur_millions": 18019662.3,
+      "population": 450380320,
+      "ppp": 1.0,
+      "price_level_index": 100.0,
+      "official_gdp_pps_index": 100.0,
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR.B1GQ.EU27_2020/?startPeriod=2024&endPeriod=2024&format=sdmx-csv"
+    }
+  },
+  "fx_rates": [
+    {
+      "pair": "EUR_RON",
+      "rate": 5.0911,
+      "date": "2026-04-15",
+      "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
+    },
+    {
+      "pair": "EUR_EUR",
+      "rate": 1.0,
+      "date": "2026-04-15",
+      "source_url": "https://www.ecb.europa.eu/"
+    }
+  ],
+  "salaries": [
+    {
+      "country": "RO",
+      "year": 2024,
+      "median_net_monthly": 4500.0,
+      "mean_net_monthly": 5553.4,
+      "currency": "RON",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_European_countries_by_average_wage"
+    },
+    {
+      "country": "FR",
+      "year": 2022,
+      "median_net_monthly": 2091.0,
+      "mean_net_monthly": 2733.0,
+      "currency": "EUR",
+      "source_url": "https://www.insee.fr/fr/statistiques/8177373"
+    },
+    {
+      "country": "DE",
+      "year": 2022,
+      "median_net_monthly": 2403.0,
+      "mean_net_monthly": 3231.0,
+      "currency": "EUR",
+      "source_url": "https://www.destatis.de/DE/Themen/Arbeit/Verdienste/_inhalt.html"
+    }
+  ],
+  "baskets": [
+    {
+      "name": "survival",
+      "description": "The basket many Romanians actually live on: shelter, basic food, transit, utilities, phone.\nNo car, no dining out, no subscriptions.\n",
+      "items": {
+        "rent_1br_outside_center_capital": 1.0,
+        "electricity_kwh": 150.0,
+        "gas_kwh": 300.0,
+        "water_m3": 4.0,
+        "internet_100mbps_monthly": 1.0,
+        "public_transit_monthly_pass": 1.0,
+        "phone_plan_monthly": 1.0,
+        "bread_loaf_500g": 20.0,
+        "milk_1l": 10.0,
+        "eggs_10": 4.0,
+        "chicken_breast_1kg": 3.0,
+        "potatoes_1kg": 5.0,
+        "apples_1kg": 3.0,
+        "pasta_500g": 4.0,
+        "coffee_ground_250g": 1.0
+      }
+    },
+    {
+      "name": "middle_class",
+      "description": "A typical Western-European middle-class lifestyle: larger apartment, better food,\ncar ownership, dining out twice a week, gym, subscriptions, one vacation amortized.\n",
+      "items": {
+        "rent_2br_good_area_capital": 1.0,
+        "electricity_kwh": 250.0,
+        "gas_kwh": 500.0,
+        "water_m3": 6.0,
+        "internet_100mbps_monthly": 1.0,
+        "public_transit_monthly_pass": 0.5,
+        "phone_plan_monthly": 2.0,
+        "car_purchase_vw_golf_equivalent": 1.0,
+        "car_insurance_annual": 1.0,
+        "fuel_petrol_liter": 80.0,
+        "bread_loaf_500g": 20.0,
+        "milk_1l": 12.0,
+        "eggs_10": 4.0,
+        "chicken_breast_1kg": 4.0,
+        "potatoes_1kg": 6.0,
+        "apples_1kg": 6.0,
+        "pasta_500g": 4.0,
+        "coffee_ground_250g": 2.0,
+        "restaurant_mid_range_meal": 8.0,
+        "gym_monthly_membership": 1.0,
+        "cinema_ticket": 2.0,
+        "netflix_standard_monthly": 1.0,
+        "spotify_premium_monthly": 1.0,
+        "vacation_week_abroad": 1.0
+      }
+    },
+    {
+      "name": "global",
+      "description": "Tradable goods and services that price nearly identically across the EU.\nphone, laptop, streaming, an intra-EU flight. Exposes where PPS lies most.\n",
+      "items": {
+        "iphone_15_128gb": 1.0,
+        "laptop_macbook_air_m3": 1.0,
+        "netflix_standard_monthly": 1.0,
+        "spotify_premium_monthly": 1.0,
+        "intra_eu_flight_return": 1.0
+      }
+    },
+    {
+      "name": "housing_only",
+      "description": "Rent + utilities + amortized purchase price for a 60m\u00b2 apartment in the capital.\nIsolates the single category that most distorts PPS comparisons.\n",
+      "items": {
+        "rent_1br_outside_center_capital": 1.0,
+        "electricity_kwh": 150.0,
+        "gas_kwh": 300.0,
+        "water_m3": 4.0,
+        "apartment_purchase_price_per_m2_capital": 0.5
+      }
+    }
+  ],
+  "items": {
+    "rent_1br_outside_center_capital": "Rent for a 1-bedroom apartment outside the city center of the capital",
+    "rent_2br_good_area_capital": "Rent for a 2-bedroom apartment in a decent area of the capital",
+    "apartment_purchase_price_per_m2_capital": "Purchase price per m\u00b2 for an apartment in the capital (secondary market, outside prime center)",
+    "electricity_kwh": "Household electricity, per kWh, including VAT",
+    "gas_kwh": "Household natural gas, per kWh, including VAT",
+    "water_m3": "Cold water + sewerage, per m\u00b3",
+    "internet_100mbps_monthly": "Fixed home internet, ~100 Mbps plan, per month",
+    "public_transit_monthly_pass": "Monthly public transit pass in the capital (all zones / central zone)",
+    "car_purchase_vw_golf_equivalent": "VW Golf (or equivalent C-segment) new, base trim, on-road price",
+    "car_insurance_annual": "Full comprehensive car insurance for a C-segment car, 35yo driver, capital",
+    "fuel_petrol_liter": "Petrol 95, per liter, at pump",
+    "bread_loaf_500g": "White bread loaf, ~500g, supermarket own-brand or generic",
+    "milk_1l": "Whole cow's milk, 1L carton, mid-range brand",
+    "eggs_10": "Chicken eggs, 10-pack, size M, cage-free or equivalent",
+    "chicken_breast_1kg": "Fresh chicken breast fillet, per kg",
+    "potatoes_1kg": "Fresh potatoes, loose, per kg",
+    "apples_1kg": "Fresh apples, loose, per kg",
+    "pasta_500g": "Dry pasta, 500g pack, mid-range brand",
+    "coffee_ground_250g": "Ground coffee, 250g pack, mid-range brand",
+    "restaurant_mid_range_meal": "Mid-range restaurant meal, one person, main course + drink",
+    "gym_monthly_membership": "Mid-range gym monthly membership, capital",
+    "cinema_ticket": "Cinema ticket, adult, evening, standard 2D",
+    "phone_plan_monthly": "Mobile postpaid plan with unlimited calls and ~20GB data",
+    "iphone_15_128gb": "Apple iPhone 15, 128GB, new, official Apple Store price",
+    "laptop_macbook_air_m3": "Apple MacBook Air M3 13\", 8GB/256GB base, new",
+    "netflix_standard_monthly": "Netflix Standard plan, per month",
+    "spotify_premium_monthly": "Spotify Premium Individual, per month",
+    "intra_eu_flight_return": "Return economy flight, ~1500km intra-EU, 3 weeks advance, low-cost or legacy",
+    "playstation_5_disc": "Sony PlayStation 5 (disc edition), new, retailer price",
+    "big_mac": "McDonalds Big Mac, single burger, per unit",
+    "vacation_week_abroad": "One week of modest foreign vacation (mid-tier hotel + meals + basic activities), 2 people, total cost"
+  },
+  "prices": {
+    "DE": [
+      {
+        "item_id": "rent_1br_outside_center_capital",
+        "price": 750.0,
+        "currency": "EUR",
+        "unit": "apartment/month",
+        "source_url": "https://www.immobilienscout24.de/immobilienpreise/berlin/berlin/mietspiegel",
+        "notes": "ImmoScout24 Mietspiegel Q1/2026 Berlin avg 13.11 EUR/m\u00b2 (outer-district Neuk\u00f6lln 12.34). 55m\u00b2 1-Zimmer \u00d7 ~13.6 \u2248 750 EUR cold rent."
+      },
+      {
+        "item_id": "rent_2br_good_area_capital",
+        "price": 1400.0,
+        "currency": "EUR",
+        "unit": "apartment/month",
+        "source_url": "https://www.immobilienscout24.de/immobilienpreise/berlin/berlin/mitte/mietspiegel",
+        "notes": "ImmoScout24 Mietspiegel Mitte 2026 18.11 EUR/m\u00b2, Prenzlauer Berg 15.82. 80m\u00b2 2-Zimmer \u00d7 ~17.5 \u2248 1,400 EUR cold rent."
+      },
+      {
+        "item_id": "apartment_purchase_price_per_m2_capital",
+        "price": 4174.0,
+        "currency": "EUR",
+        "unit": "EUR/m2",
+        "source_url": "https://atlas.immobilienscout24.de/orte/deutschland/berlin/berlin",
+        "notes": "ImmoScout24 Preisatlas Berlin avg 4,174 EUR/m\u00b2. Homeday shows 3,900."
+      },
+      {
+        "item_id": "electricity_kwh",
+        "price": 0.4283,
+        "currency": "EUR",
+        "unit": "kWh",
+        "source_url": "https://www.verivox.de/strom/strompreisentwicklung/",
+        "notes": "Verivox Q1/2026 Grundversorgung avg 42.83 ct/kWh. Market average ~32.8 ct; new-customer ~28 ct."
+      },
+      {
+        "item_id": "gas_kwh",
+        "price": 0.136,
+        "currency": "EUR",
+        "unit": "kWh",
+        "source_url": "https://www.verivox.de/gas/gaspreisentwicklung/",
+        "notes": "Verivox April 2026 Grundversorgung avg 13.6 ct/kWh; new-customer market ~11 ct."
+      },
+      {
+        "item_id": "water_m3",
+        "price": 4.023,
+        "currency": "EUR",
+        "unit": "m3",
+        "source_url": "https://www.bwb.de/de/gebuehren.php",
+        "notes": "Berliner Wasserbetriebe: Trinkwasser 1.813 + Schmutzwasser 2.210 = 4.023 EUR/m\u00b3 brutto."
+      },
+      {
+        "item_id": "internet_100mbps_monthly",
+        "price": 39.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://o2.surfen-telefonieren.de/tarife/festnetz/dsl/o2-home-m-dsl",
+        "notes": "O2 Home M DSL 100 Mbit/s regular price after first-year promo (promo 29.99 EUR). Vodafone GigaZuhause 100 comparable."
+      },
+      {
+        "item_id": "public_transit_monthly_pass",
+        "price": 63.0,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.bvg.de/en/deutschland-ticket",
+        "notes": "Deutschlandticket 63 EUR/month since 2026-01-01 (nationwide). Berlin AB monthly alternative 81.30 EUR."
+      },
+      {
+        "item_id": "car_purchase_vw_golf_equivalent",
+        "price": 29395.0,
+        "currency": "EUR",
+        "unit": "car",
+        "source_url": "https://www.volkswagen.de/de/modelle/golf.html",
+        "notes": "VW Golf 8 base 1.5 TSI 116 PS UVP incl. VAT."
+      },
+      {
+        "item_id": "car_insurance_annual",
+        "price": 900.0,
+        "currency": "EUR",
+        "unit": "year",
+        "source_url": "https://www.huk24.de/autoversicherung/vollkasko",
+        "notes": "HUK24 Vollkasko, VW Golf, 35yo Berlin (SF-Klasse ~10, 12,000 km/yr, 500 EUR SB). Midpoint of 800-1000 EUR/yr. Quote requires form."
+      },
+      {
+        "item_id": "fuel_petrol_liter",
+        "price": 2.13,
+        "currency": "EUR",
+        "unit": "liter",
+        "source_url": "https://www.adac.de/news/aktueller-spritpreis/",
+        "notes": "ADAC/Destatis Super E5 Tagesdurchschnitt end of March 2026. April trending 2.17-2.22 EUR/L after CO2 price change."
+      },
+      {
+        "item_id": "bread_loaf_500g",
+        "price": 1.69,
+        "currency": "EUR",
+        "unit": "loaf",
+        "source_url": "https://shop.rewe.de/p/rewe-beste-wahl-buttertoast-500g/555945",
+        "notes": "REWE Beste Wahl Buttertoast 500g. Ja! budget 0.99 EUR; typical Toastbrot ~1.69."
+      },
+      {
+        "item_id": "milk_1l",
+        "price": 1.05,
+        "currency": "EUR",
+        "unit": "liter",
+        "source_url": "https://shop.rewe.de/p/ja-frische-vollmilch-3-5-1l/2865690",
+        "notes": "REWE ja! Frische Vollmilch 3.5% 1L."
+      },
+      {
+        "item_id": "eggs_10",
+        "price": 3.29,
+        "currency": "EUR",
+        "unit": "10-pack",
+        "source_url": "https://www.rewe.de/shop/p/rewe-beste-wahl-eier-aus-freilandhaltung-10-stueck/8010549",
+        "notes": "REWE Beste Wahl Eier aus Freilandhaltung 10 St\u00fcck."
+      },
+      {
+        "item_id": "chicken_breast_1kg",
+        "price": 11.56,
+        "currency": "EUR",
+        "unit": "kg",
+        "source_url": "https://www.rewe.de/shop/c/huehnerfleisch/",
+        "notes": "REWE ja! H\u00e4hnchenbrustfilet 250g = 2.89 EUR \u2192 11.56 EUR/kg. Matches shelf range 10-13 EUR/kg."
+      },
+      {
+        "item_id": "potatoes_1kg",
+        "price": 1.79,
+        "currency": "EUR",
+        "unit": "kg",
+        "source_url": "https://www.rewe.de/shop/p/kartoffeln-aus-der-region-1kg/2241614",
+        "notes": "REWE Beste Wahl Speisekartoffeln 1kg, shelf non-promo."
+      },
+      {
+        "item_id": "apples_1kg",
+        "price": 2.49,
+        "currency": "EUR",
+        "unit": "kg",
+        "source_url": "https://shop.rewe.de/p/rewe-regional-apfel-rot-1kg/1907470",
+        "notes": "REWE Regional Apfel rot 1kg regular; Bio 3.49 EUR."
+      },
+      {
+        "item_id": "pasta_500g",
+        "price": 2.69,
+        "currency": "EUR",
+        "unit": "pack",
+        "source_url": "https://www.rewe.de/shop/p/barilla-spaghetti-nr-5-500g/1483021",
+        "notes": "Barilla Spaghetti Nr.5 500g at REWE regular shelf."
+      },
+      {
+        "item_id": "coffee_ground_250g",
+        "price": 4.99,
+        "currency": "EUR",
+        "unit": "pack",
+        "source_url": "https://www.rewe.de/shop/p/jacobs-filterkaffee-kroenung-klassisch-500g/5175232",
+        "notes": "Jacobs Kr\u00f6nung Klassisch 500g at REWE ~9.98 EUR; 250g-equivalent ~4.99 EUR."
+      },
+      {
+        "item_id": "restaurant_mid_range_meal",
+        "price": 25.0,
+        "currency": "EUR",
+        "unit": "meal",
+        "source_url": "https://www.falstaff.com/de/listings/die-besten-10-restaurants-fuer-mittlere-preisklasse-in-berlin",
+        "notes": "Falstaff Berlin mid-range Hauptgang 18-29 EUR + drink ~5 EUR. Representative 25 EUR."
+      },
+      {
+        "item_id": "gym_monthly_membership",
+        "price": 29.0,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.fitx.de/mitgliedschaft",
+        "notes": "FitX standard monthly; McFIT comparable 29.90 EUR regular."
+      },
+      {
+        "item_id": "cinema_ticket",
+        "price": 12.9,
+        "currency": "EUR",
+        "unit": "ticket",
+        "source_url": "https://www.uci-kinowelt.de/kinoinformation/berlin-mercedes-platz/82",
+        "notes": "UCI Kinowelt Berlin Preiskategorie 2 weekday; Sat/holidays 13.90 EUR."
+      },
+      {
+        "item_id": "phone_plan_monthly",
+        "price": 19.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.vodafone.de/privat/handys-tablets-tarife/alle-tarife-mit-vertrag.html",
+        "notes": "Vodafone GigaMobil XS 19.99 EUR/month: Allnet-Flat + 25 GB 5G (closest to 20 GB)."
+      },
+      {
+        "item_id": "iphone_15_128gb",
+        "price": 699.0,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://www.apple.com/de/shop/buy-iphone/iphone-15/6,1%22-display-128gb-blau",
+        "notes": "Apple DE list for iPhone 15 128GB. DE resellers 589-680 EUR."
+      },
+      {
+        "item_id": "laptop_macbook_air_m3",
+        "price": 1299.0,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://www.apple.com/de/shop/buy-mac/macbook-air/13-zoll-m3",
+        "notes": "Apple DE list MacBook Air 13 M3 8/256. Geizhals DE 874.95 EUR at resellers."
+      },
+      {
+        "item_id": "netflix_standard_monthly",
+        "price": 13.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.netflix.com/signup?locale=de-DE",
+        "notes": "Netflix Standard DE since April 2024; unchanged 2026."
+      },
+      {
+        "item_id": "spotify_premium_monthly",
+        "price": 12.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.spotify.com/de/premium/",
+        "notes": "Spotify Premium Individual DE (increase August 2025)."
+      },
+      {
+        "item_id": "intra_eu_flight_return",
+        "price": 180.0,
+        "currency": "EUR",
+        "unit": "return trip",
+        "source_url": "https://www.ryanair.com/flights/de/de/fluege-von-berlin-nach-bukarest",
+        "notes": "Ryanair BER-OTP RT economy, realistic 3-week advance with checked bag. Lufthansa BER-CDG 234 EUR for reference."
+      },
+      {
+        "item_id": "playstation_5_disc",
+        "price": 499.99,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://direct.playstation.com/de-de/consoles",
+        "notes": "Sony Germany direct store, PS5 Slim disc edition, 2026 list price."
+      },
+      {
+        "item_id": "big_mac",
+        "price": 5.5,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://www.mcdonalds.com/de/de-de/menu/big-mac.html",
+        "notes": "McDonald's Germany Big Mac standalone, approximate 2026 shelf price."
+      },
+      {
+        "item_id": "vacation_week_abroad",
+        "price": 1100.0,
+        "currency": "EUR",
+        "unit": "trip",
+        "source_url": "https://www.tui.com/pauschalreisen/spanien/mallorca/",
+        "notes": "TUI Mallorca 1-week packages from 481 EUR/pp; mid-tier 4-star 2 persons ~1,100 EUR. May 2026 shoulder season."
+      }
+    ],
+    "FR": [
+      {
+        "item_id": "rent_1br_outside_center_capital",
+        "price": 1130.0,
+        "currency": "EUR",
+        "unit": "apartment/month",
+        "source_url": "https://www.seloger.com/prix-de-l-immo/location/ile-de-france/paris/paris-19eme/750119.htm",
+        "notes": "SeLoger rental index Paris 19e/20e (outside central arrondissements), ~24.9-25.4 EUR/m\u00b2 \u00d7 45m\u00b2 T2 \u2248 1,120-1,143 EUR. Midpoint used."
+      },
+      {
+        "item_id": "rent_2br_good_area_capital",
+        "price": 2090.0,
+        "currency": "EUR",
+        "unit": "apartment/month",
+        "source_url": "https://www.seloger.com/prix-de-l-immo/location/ile-de-france/paris.htm",
+        "notes": "SeLoger Paris-wide T3 average (Jan 2026)."
+      },
+      {
+        "item_id": "apartment_purchase_price_per_m2_capital",
+        "price": 9669.0,
+        "currency": "EUR",
+        "unit": "EUR/m2",
+        "source_url": "https://www.meilleursagents.com/prix-immobilier/paris-75000/",
+        "notes": "MeilleursAgents estimation 1 April 2026."
+      },
+      {
+        "item_id": "electricity_kwh",
+        "price": 0.194,
+        "currency": "EUR",
+        "unit": "kWh",
+        "source_url": "https://particulier.edf.fr/fr/accueil/electricite-gaz/offres-electricite/tarif-bleu.html",
+        "notes": "EDF Tarif Bleu option Base 6 kVA, April 2026. Excludes 187.80 EUR/yr subscription."
+      },
+      {
+        "item_id": "gas_kwh",
+        "price": 0.13912,
+        "currency": "EUR",
+        "unit": "kWh",
+        "source_url": "https://particuliers.engie.fr/gaz-naturel/conseils-gaz-naturel/conseils-tarifs-gaz-naturel/evolution-prix-repere-gaz.html",
+        "notes": "Prix rep\u00e8re CRE / ENGIE residential gas TTC, April 2026."
+      },
+      {
+        "item_id": "water_m3",
+        "price": 4.23,
+        "currency": "EUR",
+        "unit": "m3",
+        "source_url": "https://www.eaudeparis.fr/prix-de-leau",
+        "notes": "Eau de Paris 4.23 EUR/m\u00b3 TTC from 1 Jan 2026 (potable + sanitation)."
+      },
+      {
+        "item_id": "internet_100mbps_monthly",
+        "price": 24.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://shop.sosh.fr/box-internet",
+        "notes": "Sosh (Orange) fiber, no-commitment plan. Entry-level French fiber already exceeds 100 Mbps; no 100-Mbps-only tier."
+      },
+      {
+        "item_id": "public_transit_monthly_pass",
+        "price": 90.8,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.iledefrance-mobilites.fr/en/tarifs-titre-de-transport-en-commun-2026",
+        "notes": "Navigo mensuel toutes zones, 1 Jan 2026."
+      },
+      {
+        "item_id": "car_purchase_vw_golf_equivalent",
+        "price": 30900.0,
+        "currency": "EUR",
+        "unit": "car",
+        "source_url": "https://www.volkswagen.fr/fr/modeles-et-configurateur/golf.html",
+        "notes": "VW Golf 1.5 TSI 116 ch starting price April 2026 (excl. 3,000 EUR dealer discount)."
+      },
+      {
+        "item_id": "car_insurance_annual",
+        "price": 1650.0,
+        "currency": "EUR",
+        "unit": "year",
+        "source_url": "https://www.matmut.fr/assurance/auto",
+        "notes": "Matmut tous risques benchmark, 35yo Paris driver, bonus 0.76, Feb 2026 comparative. Actual quote requires form."
+      },
+      {
+        "item_id": "fuel_petrol_liter",
+        "price": 2.019,
+        "currency": "EUR",
+        "unit": "liter",
+        "source_url": "https://www.prix-carburants.gouv.fr/",
+        "notes": "SP95-E10 France national avg, 9 April 2026."
+      },
+      {
+        "item_id": "bread_loaf_500g",
+        "price": 1.59,
+        "currency": "EUR",
+        "unit": "loaf",
+        "source_url": "https://www.carrefour.fr/p/pain-de-mie-extra-moelleux-nature-carrefour-classic-3270190021070",
+        "notes": "Carrefour Classic pain de mie extra moelleux nature 500g. Range 0.95-1.59 EUR for 500g pain de mie."
+      },
+      {
+        "item_id": "milk_1l",
+        "price": 1.05,
+        "currency": "EUR",
+        "unit": "liter",
+        "source_url": "https://www.carrefour.fr/p/lait-demi-ecreme-carrefour-classic-3276554163158",
+        "notes": "Carrefour Classic lait demi-\u00e9cr\u00e9m\u00e9 UHT 1L."
+      },
+      {
+        "item_id": "eggs_10",
+        "price": 1.79,
+        "currency": "EUR",
+        "unit": "10-pack",
+        "source_url": "https://www.carrefour.fr/p/oeufs-frais-simpl-3560070392742",
+        "notes": "SIMPL (Carrefour entry brand) 10 eggs standard."
+      },
+      {
+        "item_id": "chicken_breast_1kg",
+        "price": 13.9,
+        "currency": "EUR",
+        "unit": "kg",
+        "source_url": "https://www.carrefour.fr/p/filets-de-poulet-carrefour-3560070343607",
+        "notes": "Carrefour standard (non-bio) filets de poulet 1kg tray."
+      },
+      {
+        "item_id": "potatoes_1kg",
+        "price": 1.99,
+        "currency": "EUR",
+        "unit": "kg",
+        "source_url": "https://www.carrefour.fr/p/pommes-de-terre-de-consommation-baie-de-somme-3523680381476",
+        "notes": "Pommes de Terre de Consommation Baie de Somme 1kg. SIMPL budget 0.99 EUR/kg exists."
+      },
+      {
+        "item_id": "apples_1kg",
+        "price": 2.59,
+        "currency": "EUR",
+        "unit": "kg",
+        "source_url": "https://www.carrefour.fr/p/pommes-golden-delicious-bio-3276556199803",
+        "notes": "Carrefour 1kg carton apples (Golden/Granny Smith) standard."
+      },
+      {
+        "item_id": "pasta_500g",
+        "price": 1.95,
+        "currency": "EUR",
+        "unit": "pack",
+        "source_url": "https://www.carrefour.fr/p/pates-penne-rigate-barilla-8076802085738",
+        "notes": "Barilla penne rigate 500g. Typical Carrefour.fr 2026 price."
+      },
+      {
+        "item_id": "coffee_ground_250g",
+        "price": 4.49,
+        "currency": "EUR",
+        "unit": "pack",
+        "source_url": "https://www.carrefour.fr/p/cafe-moulu-classique-carrefour-classic-3270190007920",
+        "notes": "Carrefour Classic caf\u00e9 moulu classique 250g."
+      },
+      {
+        "item_id": "restaurant_mid_range_meal",
+        "price": 22.0,
+        "currency": "EUR",
+        "unit": "meal",
+        "source_url": "https://www.combien-coute.net/restaurant/ile-de-france/paris/",
+        "notes": "Paris mid-range: main 15-18 EUR + drink 3-5 EUR; representative 22 EUR for main + soft drink."
+      },
+      {
+        "item_id": "gym_monthly_membership",
+        "price": 29.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.basic-fit.com/fr-fr/prix",
+        "notes": "Basic-Fit Premium monthly, all-club access including Paris."
+      },
+      {
+        "item_id": "cinema_ticket",
+        "price": 15.5,
+        "currency": "EUR",
+        "unit": "ticket",
+        "source_url": "https://www.allocine.fr/salle/cinema-C0159/tarifs/",
+        "notes": "UGC Cin\u00e9 Cit\u00e9 Les Halles Paris 1er, tarif plein adulte."
+      },
+      {
+        "item_id": "phone_plan_monthly",
+        "price": 19.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://mobile.free.fr/fiche-forfait-free",
+        "notes": "Free 5G+ forfait, unlimited data, price locked through 2027, no commitment."
+      },
+      {
+        "item_id": "iphone_15_128gb",
+        "price": 869.0,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://www.apple.com/fr/shop/buy-iphone/iphone-15",
+        "notes": "Apple FR list price iPhone 15 128GB. Exact snippet price not exposed; value is Apple.com/fr published list since 2025."
+      },
+      {
+        "item_id": "laptop_macbook_air_m3",
+        "price": 1299.0,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://www.apple.com/fr/shop/buy-mac/macbook-air",
+        "notes": "Apple FR list for MacBook Air 13 M3 8/256. Retailers list 874-900 EUR at margin."
+      },
+      {
+        "item_id": "netflix_standard_monthly",
+        "price": 14.99,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://help.netflix.com/en/node/24926",
+        "notes": "Netflix Standard (ad-free, 2 screens), France pricing in effect since April 2025."
+      },
+      {
+        "item_id": "spotify_premium_monthly",
+        "price": 12.14,
+        "currency": "EUR",
+        "unit": "month",
+        "source_url": "https://www.spotify.com/fr/premium/",
+        "notes": "Spotify Premium Individual France."
+      },
+      {
+        "item_id": "intra_eu_flight_return",
+        "price": 308.0,
+        "currency": "EUR",
+        "unit": "return trip",
+        "source_url": "https://wwws.airfrance.fr/fr-fr/vols-de-paris-a-bucarest",
+        "notes": "Air France CDG-OTP economy RT, weekly avg 3-week advance booking, April 2026."
+      },
+      {
+        "item_id": "playstation_5_disc",
+        "price": 549.99,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://direct.playstation.com/fr-fr/consoles",
+        "notes": "Sony France direct store, PS5 Slim disc edition, 2026 list price."
+      },
+      {
+        "item_id": "big_mac",
+        "price": 5.3,
+        "currency": "EUR",
+        "unit": "unit",
+        "source_url": "https://www.mcdonalds.fr/la-carte/burgers/big-mac",
+        "notes": "McDonald's France Big Mac standalone, approximate 2026 shelf price."
+      },
+      {
+        "item_id": "vacation_week_abroad",
+        "price": 1400.0,
+        "currency": "EUR",
+        "unit": "trip",
+        "source_url": "https://www.fram.fr/espagne/canaries/sejour-vacances-tout-compris-voyage-all-inclusive-tenerife-4/",
+        "notes": "Fram Tenerife AI 1 week, 2 persons mid-tier 4-star hotel + flights, standard season."
+      }
+    ],
+    "RO": [
+      {
+        "item_id": "rent_1br_outside_center_capital",
+        "price": 400.0,
+        "currency": "EUR",
+        "unit": "apartment/month",
+        "source_url": "https://www.storia.ro/ro/rezultate/inchiriere/apartament/bucuresti",
+        "notes": "Median asking rent for garsoniera outside Sector 1 (Storia/ZF Jan 2026 sector index); S3/S6 ~350-400 EUR, overall Bucharest avg ~400 EUR."
+      },
+      {
+        "item_id": "rent_2br_good_area_capital",
+        "price": 600.0,
+        "currency": "EUR",
+        "unit": "apartment/month",
+        "source_url": "https://www.storia.ro/ro/rezultate/inchiriere/apartament/bucuresti",
+        "notes": "Median of Storia/ZF Jan 2026 sector data: S1 695, S2 680, S3 550, S4 520, S5 595, S6 530 EUR. Median ~595 rounded to 600."
+      },
+      {
+        "item_id": "apartment_purchase_price_per_m2_capital",
+        "price": 1733.0,
+        "currency": "EUR",
+        "unit": "EUR/m2",
+        "source_url": "https://sonarhome.ro/preturile-apartamentelor/bucuresti",
+        "notes": "SonarHome Bucharest avg April 2026 = 1,733 EUR/m\u00b2 (range S4 1,477 to S1 2,399)."
+      },
+      {
+        "item_id": "electricity_kwh",
+        "price": 1.1,
+        "currency": "RON",
+        "unit": "kWh",
+        "source_url": "https://www.electricafurnizare.ro/app/uploads/2025/12/Oferta-energie-electrica-SU-clienti-casnici-01.01.2026.pdf",
+        "notes": "Electrica Furnizare Serviciu Universal 01.01.2026, all-in delivered residential price estimate ~1.03-1.15 RON/kWh (active energy + distribution + 21% VAT). Midpoint 1.10."
+      },
+      {
+        "item_id": "gas_kwh",
+        "price": 0.31,
+        "currency": "RON",
+        "unit": "kWh",
+        "source_url": "https://www.engie.ro/plafonare/",
+        "notes": "Residential capped price (OUG 12/2026), 0.310 RON/kWh incl. VAT."
+      },
+      {
+        "item_id": "water_m3",
+        "price": 11.58,
+        "currency": "RON",
+        "unit": "m3",
+        "source_url": "https://www.apanovabucuresti.ro/informatii-utile/tarife-si-facturi/tarife-pentru-consum-apa-si-canalizare",
+        "notes": "Apa Nova Bucuresti, from 01.10.2025: potable 7.58 + sewerage 4.00 = 11.58 RON/m\u00b3 incl. VAT."
+      },
+      {
+        "item_id": "internet_100mbps_monthly",
+        "price": 30.5,
+        "currency": "RON",
+        "unit": "month",
+        "source_url": "https://www.digi.ro/servicii/internet/internet-fix",
+        "notes": "Digi FiberLink 500 (500 Mbps) entry plan = 30.50 RON/month. Covers the 100 Mbps+ threshold."
+      },
+      {
+        "item_id": "public_transit_monthly_pass",
+        "price": 100.0,
+        "currency": "RON",
+        "unit": "month",
+        "source_url": "https://www.stb.ro/tarife",
+        "notes": "STB monthly pass, all surface lines, 2026 tariff. Integrated STB + Metrorex is 160 RON."
+      },
+      {
+        "item_id": "car_purchase_vw_golf_equivalent",
+        "price": 13490.0,
+        "currency": "EUR",
+        "unit": "car",
+        "source_url": "https://www.dacia.ro/gama-dacia/sandero/versiuni-si-preturi.html",
+        "notes": "Dacia Sandero Essential 2026 base price, used as local C-segment equivalent. A VW Golf in RO starts around 28,000 EUR but is not the typical local new-car benchmark."
+      },
+      {
+        "item_id": "car_insurance_annual",
+        "price": 3500.0,
+        "currency": "RON",
+        "unit": "year",
+        "source_url": "https://pret-asigurare.ro/rca/bucuresti/",
+        "notes": "Combined RCA (~680 RON/yr for Groupama 1400-2000cc Bucharest) + CASCO full cover (~2,500-3,000 RON). Total 3,500 RON is midpoint."
+      },
+      {
+        "item_id": "fuel_petrol_liter",
+        "price": 8.93,
+        "currency": "RON",
+        "unit": "liter",
+        "source_url": "https://pretcarburant.ro/retea/omv",
+        "notes": "National avg Benzina Standard 95 on 14.04.2026 (OMV 8.83, Petrom 8.72)."
+      },
+      {
+        "item_id": "bread_loaf_500g",
+        "price": 4.5,
+        "currency": "RON",
+        "unit": "loaf",
+        "source_url": "https://carrefour.ro/bacanie-carrefour/alimente/paine-si-specialitati",
+        "notes": "Carrefour/Mega Image 500g franzela range 2.60-9.50 RON depending on brand. Mid-range ~4.50 RON."
+      },
+      {
+        "item_id": "milk_1l",
+        "price": 6.5,
+        "currency": "RON",
+        "unit": "liter",
+        "source_url": "https://carrefour.ro/bacanie-carrefour/alimente/lapte-si-derivate-lapte-uht",
+        "notes": "Zuzu 1.5% fat 1L ~6.50 RON; Carrefour own UHT is 4.75 RON."
+      },
+      {
+        "item_id": "eggs_10",
+        "price": 15.99,
+        "currency": "RON",
+        "unit": "10-pack",
+        "source_url": "https://carrefour.ro/produse/oua-marimea-m-10-bucati-carrefour-1657-15509148/",
+        "notes": "Carrefour own-label size M 10-pack, typical April 2026 RO shelf range ~15-17 RON."
+      },
+      {
+        "item_id": "chicken_breast_1kg",
+        "price": 41.6,
+        "currency": "RON",
+        "unit": "kg",
+        "source_url": "https://www.bringo.ro/ro/stores/carrefour_hipermarket/pui-intreg-si-piese-4/products/Piept-de-pui-dezosat-Fragedo-per-kg-55000217-2-ro/62172",
+        "notes": "Fragedo Transavia piept pui dezosat, Carrefour assortment via Bringo."
+      },
+      {
+        "item_id": "potatoes_1kg",
+        "price": 4.5,
+        "currency": "RON",
+        "unit": "kg",
+        "source_url": "https://www.ofertelecatalog.ro/oferte/cartofi/carrefour",
+        "notes": "Regular table potatoes at Carrefour April 2026 ~3.99-4.99 RON/kg."
+      },
+      {
+        "item_id": "apples_1kg",
+        "price": 3.65,
+        "currency": "RON",
+        "unit": "kg",
+        "source_url": "https://www.bringo.ro/ro/stores/carrefour_hipermarket/8/products/Mere-Golden-Romania-Filiera-Calitatii-Carrefour-per-kg-22502705-2-ro/247861",
+        "notes": "Mere Golden Romania Filiera Calitatii Carrefour per kg."
+      },
+      {
+        "item_id": "pasta_500g",
+        "price": 6.09,
+        "currency": "RON",
+        "unit": "pack",
+        "source_url": "https://carrefour.ro/produse/spaghete-nr-5-barilla-500g-19-11004101",
+        "notes": "Barilla Spaghete nr.5 500g shelf price."
+      },
+      {
+        "item_id": "coffee_ground_250g",
+        "price": 20.99,
+        "currency": "RON",
+        "unit": "pack",
+        "source_url": "https://carrefour.ro/produse/cafea-macinata-jacobs-kronung-alintaroma-250-g-19-11005416",
+        "notes": "Jacobs Kronung Alintaroma 250g (promo; regular 24.99 RON)."
+      },
+      {
+        "item_id": "restaurant_mid_range_meal",
+        "price": 85.0,
+        "currency": "RON",
+        "unit": "meal",
+        "source_url": "https://www.bucuresti.ro/articole/de-la-shaorma-la-fine-dining-cat-costa-sa-mananci-in-oras-in-bucuresti-589",
+        "notes": "Bucharest mid-range mains 50-120 RON + drink 15-25 RON; midpoint main+drink ~85 RON."
+      },
+      {
+        "item_id": "gym_monthly_membership",
+        "price": 250.0,
+        "currency": "RON",
+        "unit": "month",
+        "source_url": "https://www.worldclass.ro/abonamente/",
+        "notes": "World Class Gold monthly Bucharest, midpoint of 230-270 RON depending on club."
+      },
+      {
+        "item_id": "cinema_ticket",
+        "price": 32.5,
+        "currency": "RON",
+        "unit": "ticket",
+        "source_url": "https://www.cinemacity.ro/magnoliaPublic/dam/jcr:688522ef-d468-409c-9251-da9efb5c357e",
+        "notes": "Cinema City 2D adult evening ticket Fri-Sun. Mon-Thu after 5pm = 28 RON."
+      },
+      {
+        "item_id": "phone_plan_monthly",
+        "price": 25.0,
+        "currency": "RON",
+        "unit": "month",
+        "source_url": "https://www.digi.ro/servicii/telefonie-mobila/optim/digi-mobil-optim-nelimitat",
+        "notes": "Digi Mobil Optim Nelimitat, unlimited voice + 200 GB data, ~5.08 EUR/month \u2248 25 RON."
+      },
+      {
+        "item_id": "iphone_15_128gb",
+        "price": 3199.9,
+        "currency": "RON",
+        "unit": "unit",
+        "source_url": "https://altex.ro/telefon-apple-iphone-15-5g-128gb-black/cpd/SMTIP151BK/",
+        "notes": "Altex authorized RO reseller. No direct Apple Store in RO."
+      },
+      {
+        "item_id": "laptop_macbook_air_m3",
+        "price": 5499.99,
+        "currency": "RON",
+        "unit": "unit",
+        "source_url": "https://istyle.ro/mac/macbook-air/macbook-air-13-m3.html",
+        "notes": "iSTYLE Apple Premium Partner RO, MacBook Air 13 M3 8/256 starting price."
+      },
+      {
+        "item_id": "netflix_standard_monthly",
+        "price": 54.95,
+        "currency": "RON",
+        "unit": "month",
+        "source_url": "https://help.netflix.com/en/node/24926",
+        "notes": "Netflix Standard RO = 10.99 EUR/month \u2248 54.95 RON."
+      },
+      {
+        "item_id": "spotify_premium_monthly",
+        "price": 26.0,
+        "currency": "RON",
+        "unit": "month",
+        "source_url": "https://www.spotify.com/ro-ro/premium/",
+        "notes": "Spotify Premium Individual RO, 26 RON/month."
+      },
+      {
+        "item_id": "intra_eu_flight_return",
+        "price": 750.0,
+        "currency": "RON",
+        "unit": "return trip",
+        "source_url": "https://www.wizzair.com/ro-ro/zboruri-ieftine-din-bucuresti-spre-frankfurt-pe-main",
+        "notes": "Wizz Air OTP-FRA 3-week advance economy RT incl. small bag, midpoint 650-900 RON \u2248 750."
+      },
+      {
+        "item_id": "playstation_5_disc",
+        "price": 2999.0,
+        "currency": "RON",
+        "unit": "unit",
+        "source_url": "https://altex.ro/consola-sony-playstation-5-slim-disc-edition-1tb-alba/cpd/GAMPS5DISCCSLM/",
+        "notes": "Altex RO, PS5 Slim disc 1TB, standard shelf price April 2026."
+      },
+      {
+        "item_id": "big_mac",
+        "price": 22.0,
+        "currency": "RON",
+        "unit": "unit",
+        "source_url": "https://www.mcdonalds.ro/meniu/burger-carne-de-vita/big-mac",
+        "notes": "McDonald's Romania Big Mac standalone, approximate 2026 shelf price."
+      },
+      {
+        "item_id": "vacation_week_abroad",
+        "price": 3600.0,
+        "currency": "RON",
+        "unit": "trip",
+        "source_url": "https://www.vacantesmart.ro/Turcia-155-7699/Antalya-693-7701/sejururi-cu-avionul",
+        "notes": "Antalya AI 7-night charter package ex-Bucharest, 2 persons mid-tier, shoulder-season ~3,600 RON."
+      }
+    ]
+  },
+  "reproduced_pps_index": {
+    "RO": 77.77408869246179,
+    "FR": 97.63853083067977,
+    "DE": 115.89819034267106,
+    "EU27": 100.0
+  },
+  "salary_net_eur": {
+    "RO": 883.8954253501208,
+    "FR": 2091.0,
+    "DE": 2403.0
+  },
+  "basket_cost_eur": {
+    "survival": {
+      "DE": 1118.4270000000001,
+      "FR": 1474.7060000000001,
+      "RO": 573.3181434267643
+    },
+    "middle_class": {
+      "DE": 2726.707999999999,
+      "FR": 3432.536666666666,
+      "RO": 1404.9186145102892
+    },
+    "global": {
+      "DE": 253.45916666666668,
+      "FR": 386.3313888888889,
+      "RO": 203.18187348728392
+    },
+    "housing_only": {
+      "DE": 2958.1369999999997,
+      "FR": 6052.256,
+      "RO": 1326.2749012983443
+    }
+  },
+  "basket_item_breakdown": {
+    "survival": {
+      "DE": {
+        "rent_1br_outside_center_capital": 750.0,
+        "electricity_kwh": 64.245,
+        "gas_kwh": 40.800000000000004,
+        "water_m3": 16.092,
+        "internet_100mbps_monthly": 39.99,
+        "public_transit_monthly_pass": 63.0,
+        "phone_plan_monthly": 19.99,
+        "bread_loaf_500g": 33.8,
+        "milk_1l": 10.5,
+        "eggs_10": 13.16,
+        "chicken_breast_1kg": 34.68,
+        "potatoes_1kg": 8.95,
+        "apples_1kg": 7.470000000000001,
+        "pasta_500g": 10.76,
+        "coffee_ground_250g": 4.99
+      },
+      "FR": {
+        "rent_1br_outside_center_capital": 1130.0,
+        "electricity_kwh": 29.1,
+        "gas_kwh": 41.736,
+        "water_m3": 16.92,
+        "internet_100mbps_monthly": 24.99,
+        "public_transit_monthly_pass": 90.8,
+        "phone_plan_monthly": 19.99,
+        "bread_loaf_500g": 31.8,
+        "milk_1l": 10.5,
+        "eggs_10": 7.16,
+        "chicken_breast_1kg": 41.7,
+        "potatoes_1kg": 9.95,
+        "apples_1kg": 7.77,
+        "pasta_500g": 7.8,
+        "coffee_ground_250g": 4.49
+      },
+      "RO": {
+        "rent_1br_outside_center_capital": 400.0,
+        "electricity_kwh": 32.40949892950443,
+        "gas_kwh": 18.267172123902498,
+        "water_m3": 9.098230244937243,
+        "internet_100mbps_monthly": 5.990846771817486,
+        "public_transit_monthly_pass": 19.642120563336018,
+        "phone_plan_monthly": 4.9105301408340045,
+        "bread_loaf_500g": 17.677908507002414,
+        "milk_1l": 12.767378366168412,
+        "eggs_10": 12.563100312309718,
+        "chicken_breast_1kg": 24.513366463043354,
+        "potatoes_1kg": 4.4194771267506034,
+        "apples_1kg": 2.150812201685294,
+        "pasta_500g": 4.784820569228654,
+        "coffee_ground_250g": 4.12288110624423
+      }
+    },
+    "middle_class": {
+      "DE": {
+        "rent_2br_good_area_capital": 1400.0,
+        "electricity_kwh": 107.075,
+        "gas_kwh": 68.0,
+        "water_m3": 24.137999999999998,
+        "internet_100mbps_monthly": 39.99,
+        "public_transit_monthly_pass": 31.5,
+        "phone_plan_monthly": 39.98,
+        "car_purchase_vw_golf_equivalent": 244.95833333333334,
+        "car_insurance_annual": 75.0,
+        "fuel_petrol_liter": 170.39999999999998,
+        "bread_loaf_500g": 33.8,
+        "milk_1l": 12.600000000000001,
+        "eggs_10": 13.16,
+        "chicken_breast_1kg": 46.24,
+        "potatoes_1kg": 10.74,
+        "apples_1kg": 14.940000000000001,
+        "pasta_500g": 10.76,
+        "coffee_ground_250g": 9.98,
+        "restaurant_mid_range_meal": 200.0,
+        "gym_monthly_membership": 29.0,
+        "cinema_ticket": 25.8,
+        "netflix_standard_monthly": 13.99,
+        "spotify_premium_monthly": 12.99,
+        "vacation_week_abroad": 91.66666666666667
+      },
+      "FR": {
+        "rent_2br_good_area_capital": 2090.0,
+        "electricity_kwh": 48.5,
+        "gas_kwh": 69.56,
+        "water_m3": 25.380000000000003,
+        "internet_100mbps_monthly": 24.99,
+        "public_transit_monthly_pass": 45.4,
+        "phone_plan_monthly": 39.98,
+        "car_purchase_vw_golf_equivalent": 257.5,
+        "car_insurance_annual": 137.5,
+        "fuel_petrol_liter": 161.52,
+        "bread_loaf_500g": 31.8,
+        "milk_1l": 12.600000000000001,
+        "eggs_10": 7.16,
+        "chicken_breast_1kg": 55.6,
+        "potatoes_1kg": 11.94,
+        "apples_1kg": 15.54,
+        "pasta_500g": 7.8,
+        "coffee_ground_250g": 8.98,
+        "restaurant_mid_range_meal": 176.0,
+        "gym_monthly_membership": 29.99,
+        "cinema_ticket": 31.0,
+        "netflix_standard_monthly": 14.99,
+        "spotify_premium_monthly": 12.14,
+        "vacation_week_abroad": 116.66666666666667
+      },
+      "RO": {
+        "rent_2br_good_area_capital": 600.0,
+        "electricity_kwh": 54.01583154917405,
+        "gas_kwh": 30.44528687317083,
+        "water_m3": 13.647345367405865,
+        "internet_100mbps_monthly": 5.990846771817486,
+        "public_transit_monthly_pass": 9.821060281668009,
+        "phone_plan_monthly": 9.821060281668009,
+        "car_purchase_vw_golf_equivalent": 112.41666666666667,
+        "car_insurance_annual": 57.289518309730056,
+        "fuel_petrol_liter": 140.3233093044725,
+        "bread_loaf_500g": 17.677908507002414,
+        "milk_1l": 15.320854039402093,
+        "eggs_10": 12.563100312309718,
+        "chicken_breast_1kg": 32.68448861739114,
+        "potatoes_1kg": 5.303372552100725,
+        "apples_1kg": 4.301624403370588,
+        "pasta_500g": 4.784820569228654,
+        "coffee_ground_250g": 8.24576221248846,
+        "restaurant_mid_range_meal": 133.56641983068494,
+        "gym_monthly_membership": 49.10530140834005,
+        "cinema_ticket": 12.767378366168412,
+        "netflix_standard_monthly": 10.793345249553143,
+        "spotify_premium_monthly": 5.106951346467365,
+        "vacation_week_abroad": 58.92636169000806
+      }
+    },
+    "global": {
+      "DE": {
+        "iphone_15_128gb": 19.416666666666668,
+        "laptop_macbook_air_m3": 27.0625,
+        "netflix_standard_monthly": 13.99,
+        "spotify_premium_monthly": 12.99,
+        "intra_eu_flight_return": 180.0
+      },
+      "FR": {
+        "iphone_15_128gb": 24.13888888888889,
+        "laptop_macbook_air_m3": 27.0625,
+        "netflix_standard_monthly": 14.99,
+        "spotify_premium_monthly": 12.14,
+        "intra_eu_flight_return": 308.0
+      },
+      "RO": {
+        "iphone_15_128gb": 17.459117108505257,
+        "laptop_macbook_air_m3": 22.506555557738015,
+        "netflix_standard_monthly": 10.793345249553143,
+        "spotify_premium_monthly": 5.106951346467365,
+        "intra_eu_flight_return": 147.31590422502015
+      }
+    },
+    "housing_only": {
+      "DE": {
+        "rent_1br_outside_center_capital": 750.0,
+        "electricity_kwh": 64.245,
+        "gas_kwh": 40.800000000000004,
+        "water_m3": 16.092,
+        "apartment_purchase_price_per_m2_capital": 2087.0
+      },
+      "FR": {
+        "rent_1br_outside_center_capital": 1130.0,
+        "electricity_kwh": 29.1,
+        "gas_kwh": 41.736,
+        "water_m3": 16.92,
+        "apartment_purchase_price_per_m2_capital": 4834.5
+      },
+      "RO": {
+        "rent_1br_outside_center_capital": 400.0,
+        "electricity_kwh": 32.40949892950443,
+        "gas_kwh": 18.267172123902498,
+        "water_m3": 9.098230244937243,
+        "apartment_purchase_price_per_m2_capital": 866.5
+      }
+    }
+  },
+  "baskets_per_month": {
+    "survival": {
+      "RO": {
+        "RO": 1.5417189138076348,
+        "FR": 0.5993706035983585,
+        "DE": 0.7903022954114312
+      },
+      "FR": {
+        "RO": 3.6471896519826505,
+        "FR": 1.4179097392971887,
+        "DE": 1.8695900581799256
+      },
+      "DE": {
+        "RO": 4.19139011655395,
+        "FR": 1.6294773331091077,
+        "DE": 2.148553280634319
+      }
+    },
+    "middle_class": {
+      "RO": {
+        "RO": 0.6291435078310349,
+        "FR": 0.2575050206844465,
+        "DE": 0.32416211246313176
+      },
+      "FR": {
+        "RO": 1.4883424409099009,
+        "FR": 0.60917047742146,
+        "DE": 0.7668587908936346
+      },
+      "DE": {
+        "RO": 1.7104193617917225,
+        "FR": 0.7000653549707166,
+        "DE": 0.8812824842264008
+      }
+    },
+    "global": {
+      "RO": {
+        "RO": 4.350267128555831,
+        "FR": 2.2879202952994695,
+        "DE": 3.4873286966675927
+      },
+      "FR": {
+        "RO": 10.291272366532562,
+        "FR": 5.412451745155462,
+        "DE": 8.249849581293502
+      },
+      "DE": {
+        "RO": 11.826842418353776,
+        "FR": 6.220048562223134,
+        "DE": 9.48081709414074
+      }
+    },
+    "housing_only": {
+      "RO": {
+        "RO": 0.6664496361085019,
+        "FR": 0.14604395870731854,
+        "DE": 0.29880138254249916
+      },
+      "FR": {
+        "RO": 1.5765962229648132,
+        "FR": 0.34549100368523733,
+        "DE": 0.7068638132716639
+      },
+      "DE": {
+        "RO": 1.8118415704373247,
+        "FR": 0.39704202862535887,
+        "DE": 0.8123356017655707
+      }
+    }
+  },
+  "rpp": {
+    "survival": {
+      "RO": {
+        "RO": 174.9403785281143,
+        "FR": 68.01117851837172,
+        "DE": 89.6763874871707
+      },
+      "FR": {
+        "RO": 413.85023726917626,
+        "FR": 160.89162835703524,
+        "DE": 212.144243377431
+      },
+      "DE": {
+        "RO": 475.60120524047375,
+        "FR": 184.89841364990707,
+        "DE": 243.79847768338914
+      }
+    },
+    "middle_class": {
+      "RO": {
+        "RO": 71.38953957348917,
+        "FR": 29.2193508090073,
+        "DE": 36.78299730961801
+      },
+      "FR": {
+        "RO": 168.88369706069716,
+        "FR": 69.12317994793649,
+        "DE": 87.01622971285893
+      },
+      "DE": {
+        "RO": 194.08298614866342,
+        "FR": 79.4371121065956,
+        "DE": 99.99999999999999
+      }
+    },
+    "global": {
+      "RO": {
+        "RO": 493.6291378098298,
+        "FR": 259.6125914504962,
+        "DE": 395.7106556734538
+      },
+      "FR": {
+        "RO": 1167.7609110280175,
+        "FR": 614.1562826936893,
+        "DE": 936.118637208058
+      },
+      "DE": {
+        "RO": 1342.0035720709354,
+        "FR": 705.7950967541536,
+        "DE": 1075.7977451989304
+      }
+    },
+    "housing_only": {
+      "RO": {
+        "RO": 75.62270305343905,
+        "FR": 16.571753248394298,
+        "DE": 33.905290061993036
+      },
+      "FR": {
+        "RO": 178.89794148680556,
+        "FR": 39.20320781009429,
+        "DE": 80.20853993168338
+      },
+      "DE": {
+        "RO": 205.59146503720413,
+        "FR": 45.05275388218871,
+        "DE": 92.1765286732832
+      }
+    }
+  },
+  "divergence": {
+    "survival": {
+      "RO": -5.389979770676717,
+      "FR": 21.153030408145938,
+      "DE": 0.0
+    },
+    "middle_class": {
+      "RO": -4.965095767177175,
+      "FR": 17.526016163713308,
+      "DE": 0.0
+    },
+    "global": {
+      "RO": 24.594274895777197,
+      "FR": 31.474047711579757,
+      "DE": 0.0
+    },
+    "housing_only": {
+      "RO": -17.310143257521787,
+      "FR": 48.346363874358644,
+      "DE": 0.0
+    }
+  },
+  "cross_index": {
+    "survival": {
+      "RO": {
+        "RO": 99.99999999999999,
+        "FR": 42.271421585371634,
+        "DE": 36.78299730961801
+      },
+      "FR": {
+        "RO": 236.56644666666662,
+        "FR": 100.0,
+        "DE": 87.01622971285893
+      },
+      "DE": {
+        "RO": 271.86474,
+        "FR": 114.92109038737445,
+        "DE": 100.0
+      }
+    },
+    "middle_class": {
+      "RO": {
+        "RO": 100.0,
+        "FR": 42.27142158537163,
+        "DE": 36.78299730961801
+      },
+      "FR": {
+        "RO": 236.56644666666665,
+        "FR": 100.0,
+        "DE": 87.01622971285893
+      },
+      "DE": {
+        "RO": 271.86474,
+        "FR": 114.92109038737448,
+        "DE": 99.99999999999999
+      }
+    },
+    "global": {
+      "RO": {
+        "RO": 100.0,
+        "FR": 42.271421585371634,
+        "DE": 36.78299730961801
+      },
+      "FR": {
+        "RO": 236.56644666666665,
+        "FR": 100.0,
+        "DE": 87.01622971285892
+      },
+      "DE": {
+        "RO": 271.86474,
+        "FR": 114.92109038737445,
+        "DE": 100.0
+      }
+    },
+    "housing_only": {
+      "RO": {
+        "RO": 100.0,
+        "FR": 42.271421585371634,
+        "DE": 36.78299730961801
+      },
+      "FR": {
+        "RO": 236.56644666666662,
+        "FR": 100.0,
+        "DE": 87.01622971285892
+      },
+      "DE": {
+        "RO": 271.86474,
+        "FR": 114.92109038737448,
+        "DE": 100.0
+      }
+    }
+  }
+}
